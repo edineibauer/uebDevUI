@@ -1,0 +1,17 @@
+{
+  "name": "ueb/dev-ui",
+  "description": "Interface de Usuário para gestão e desenvolvimento do sistema.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Edinei J. Bauer",
+      "email": "edineibauer@gmail.com"
+    }
+  ],
+  "require": {
+    "ueb/dashboard": "*",
+    "php": "^7.1",
+    "ext-json": "*"
+  }
+}
