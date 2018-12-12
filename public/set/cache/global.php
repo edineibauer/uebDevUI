@@ -1,2 +1,2 @@
 <?php
-$up = new \Dashboard\UpdateDashboard(['assets']);
+$up = new \Config\updateSystem(['assets']);

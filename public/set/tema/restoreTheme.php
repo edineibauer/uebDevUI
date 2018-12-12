@@ -11,7 +11,7 @@ if(file_exists(PATH_HOME . "public/assets/theme-recovery.min.css")) {
     fwrite($f, $atual);
     fclose($f);
 
-    new \Dashboard\UpdateDashboard(['assets']);
+    new \Config\updateSystem(['assets']);
 
     $data['data'] = "ok";
 
