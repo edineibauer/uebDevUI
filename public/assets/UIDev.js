@@ -12,7 +12,7 @@ function mainLoading() {
 
 function requestDashboardContent(file) {
     mainLoading();
-    get(file, function (data) {
+    view(file, function (data) {
         setDashboardContent(data.content)
     })
 }
@@ -49,7 +49,7 @@ $(function () {
         })
     });
     setTimeout(function () {
-        get("devPages/panel", function (data) {
+        view("devPages/panel", function (data) {
             $("#dashboard").html(data.content);
             spaceHeader()
         })
