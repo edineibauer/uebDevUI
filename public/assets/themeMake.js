@@ -258,6 +258,21 @@ function restoreTheme() {
 
             post("dev-ui", "cache/update", {}, function () {
                 toast("Recarregando Arquivos...", 4000);
+
+                //delete service workers
+                navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                    for (let registration of registrations) {
+                        registration.unregister()
+                    }
+                });
+
+                //delete caches
+                caches.keys().then(cacheNames => {
+                    return Promise.all(cacheNames.map(cacheName => {
+                        return caches.delete(cacheName)
+                    }))
+                });
+
                 setTimeout(function () {
                     location.reload()
                 }, 700)
@@ -272,6 +287,21 @@ function saveTheme() {
         post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
             post("dev-ui", "cache/update", {}, function () {
                 toast("Recarregando Arquivos...", 4000);
+
+                //delete service workers
+                navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                    for (let registration of registrations) {
+                        registration.unregister()
+                    }
+                });
+
+                //delete caches
+                caches.keys().then(cacheNames => {
+                    return Promise.all(cacheNames.map(cacheName => {
+                        return caches.delete(cacheName)
+                    }))
+                });
+
                 setTimeout(function () {
                     location.reload()
                 }, 700)
