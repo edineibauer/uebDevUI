@@ -24,13 +24,4 @@ $(function () {
             }, 700)
         })
     });
-    $("#clear-global").off("click").on("click", function () {
-        toast("Atualizando Assets", 2000);
-        post("dev-ui", "cache/global", {}, function (g) {
-            toast("Recarregando Assets...", 4000);
-            setTimeout(function () {
-                location.reload()
-            }, 700)
-        })
-    })
 })

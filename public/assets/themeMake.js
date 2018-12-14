@@ -255,8 +255,9 @@ function restoreTheme() {
         if (d === "no") {
             toast("tema anterior não encontrado", 3000, "toast-warning");
         } else {
-            $("link[href='" + HOME + "public/assets/theme.min.css?v=" + VERSION +"]'").attr("href", HOME + "public/assets/theme.min.css?v=99" + Math.ceil(Math.random() * 1000));
-            location.href = HOME + "UIDev";
+            clearCache().then(d => {
+                location.href = HOME + "UIDev";
+            });
         }
     });
 }
@@ -265,8 +266,9 @@ function saveTheme() {
     if(localStorage.txt) {
         toast("Aplicando Tema", 8000, "toast-success");
         post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
-            $("link[href='" + HOME + "public/assets/theme.min.css?v=" + VERSION +"]'").attr("href", HOME + "public/assets/theme.min.css?v=99" + Math.ceil(Math.random() * 1000));
-            location.href = HOME + "UIDev";
+            clearCache().then(d => {
+                location.href = HOME + "UIDev";
+            });
         });
     } else {
         toast("selecione um tema antes", 3000, "toast-warning");
