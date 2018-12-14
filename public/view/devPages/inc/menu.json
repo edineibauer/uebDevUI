@@ -28,11 +28,11 @@
     "file": "devPages/integracoes"
   },
   {
-    "icon": "settings_ethernet",
-    "title": "Desenvolvimento",
+    "icon": "router",
+    "title": "Rotas",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/desenvolvimento"
+    "file": "devPages/rotas"
   },
   {
     "icon": "block",
@@ -40,5 +40,12 @@
     "action": "page",
     "lib": "dev-ui",
     "file": "devPages/permissoes"
+  },
+  {
+    "icon": "settings_ethernet",
+    "title": "Desenvolvimento",
+    "action": "page",
+    "lib": "dev-ui",
+    "file": "devPages/desenvolvimento"
   }
 ]

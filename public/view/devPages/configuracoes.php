@@ -21,7 +21,7 @@ if (!$read->getResult()) {
     $d->save();
 }
 
-$form = new \FormCrud\Form("config");
+$form = new \Form\Form("config");
 $dados['configForm'] = $form->getForm(1);
 
 $data['data'] = $tpl->getShow('configuracoes', $dados);

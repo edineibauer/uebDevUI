@@ -17,29 +17,11 @@
             </button>
         </div>
         <div class="left padding-medium padding-16">
-            <button id="clear-global" class="btn hover-shadow">
-                <i class="material-icons left padding-right" title="atualiza os arquivos de CSS, JS, FONT, IMG">info</i>
-                <span class="left padding-tiny">Atualizar Assets</span>
-            </button>
-        </div>
-        <div class="left padding-medium padding-16">
             <button id="envelopar-lib" class="btn hover-shadow">
                 <i class="material-icons left padding-right" title="carrega arquivos de desenvolvimento local para subir para o controlador de versão">info</i>
                 <span class="left padding-tiny">Envelopar Biblioteca</span>
             </button>
         </div>
-    </div>
-</section>
-
-<section class="col padding-32 border-bottom">
-    <header class="container col">
-        <h2>Rotas Aceitas <i class="material-icons" style="cursor: default"
-                             title="define quais bibliotecas tem permissão para mostrar conteúdo no sistema (CUIDADO: rotas desconhecidas podem danificar o sistema)">info</i>
-        </h2>
-    </header>
-
-    <div id="routes-settings">
-        {$routesAll}
     </div>
 </section>
 
