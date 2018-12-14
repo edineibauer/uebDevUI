@@ -22,6 +22,7 @@ if (!$read->getResult()) {
 }
 
 $form = new \Form\Form("config");
+$form->setCallback("updateConfig");
 $dados['configForm'] = $form->getForm(1);
 
 $data['data'] = $tpl->getShow('configuracoes', $dados);
