@@ -16,7 +16,7 @@ $(function () {
         })
     });
     $("#clear-cache").off("click").on("click", function () {
-        toast("Atualizando Sistema...", 3000);
+        toast("Atualizando Sistema...", 7000);
         post("dev-ui", "cache/update", {}, function () {
             toast("Recarregando Arquivos...", 4000);
             setTimeout(function () {

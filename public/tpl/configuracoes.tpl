@@ -15,3 +15,4 @@
         </div>
     </section>
 </div>
+<script src="{$home}{$vendor}dev-ui/public/assets/configuracoes.js?v={$version}"></script>
