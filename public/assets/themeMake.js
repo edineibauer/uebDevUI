@@ -255,9 +255,13 @@ function restoreTheme() {
         if (d === "no") {
             toast("tema anterior não encontrado", 3000, "toast-warning");
         } else {
-            clearCache().then(d => {
-                location.href = HOME + "UIDev";
-            });
+
+            post("dev-ui", "cache/update", {}, function () {
+                toast("Recarregando Arquivos...", 4000);
+                setTimeout(function () {
+                    location.reload()
+                }, 700)
+            })
         }
     });
 }
@@ -266,9 +270,12 @@ function saveTheme() {
     if(localStorage.txt) {
         toast("Aplicando Tema", 8000, "toast-success");
         post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
-            clearCache().then(d => {
-                location.href = HOME + "UIDev";
-            });
+            post("dev-ui", "cache/update", {}, function () {
+                toast("Recarregando Arquivos...", 4000);
+                setTimeout(function () {
+                    location.reload()
+                }, 700)
+            })
         });
     } else {
         toast("selecione um tema antes", 3000, "toast-warning");

@@ -11,8 +11,6 @@ if(file_exists(PATH_HOME . "public/assets/theme-recovery.min.css")) {
     fwrite($f, $atual);
     fclose($f);
 
-    new \Config\updateSystem();
-
     $data['data'] = "ok";
 
 } else {
