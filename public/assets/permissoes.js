@@ -15,21 +15,20 @@ $(function () {
 
     var permit = {
         users: {},
-        entidades_do_sistema: {},
         entidades: {},
         permissoes: {}
     };
 
     //carrega os recursos
-    let pt = loadResource('tipos_de_usuarios');
     let pp = loadResource('permissoes');
     let pe = loadResource('entidades');
+    let pt = loadResource('tipos_de_usuarios');
 
     Promise.all([pp, pe, pt]).then(r => {
         if(typeof r[0].data.js === "undefined" && typeof r[1].data.js === "undefined" && typeof r[2].data.js === "undefined") {
-            permit.permissoes = preenchePermissoesNaoDefinidas(r[0].data);
-            permit.entidades = r[1].data;
             permit.users = r[2].data;
+            permit.entidades = r[1].data;
+            permit.permissoes = preenchePermissoesNaoDefinidas(r[0].data);
 
             //show list entity
             getJSON(HOME + "get/tpl/allow-list-entity").then(tpl => {
@@ -81,13 +80,12 @@ $(function () {
     function preenchePermissoesNaoDefinidas(permissoes) {
 
         //menu adm
-        $.each(permit.entidades, function (b, e) {
-            if(typeof permissoes[1] === "undefined")
-                permissoes[1] = {};
+        if(typeof permissoes[1] === "undefined")
+            permissoes[1] = {};
 
+        $.each(permit.entidades, function (b, e) {
             if(typeof permissoes[1][e] === "undefined")
                 permissoes[1][e] = {};
-
             permissoes[1][e]['menu'] = false;
         });
 
@@ -97,12 +95,13 @@ $(function () {
                 permissoes[u.id] = {};
 
             $.each(permit.entidades, function (b, e) {
-                if(typeof permissoes[u.id][e] === "undefined")
+                if(typeof permissoes[u.id][e] === "undefined") {
                     permissoes[u.id][e] = {};
 
-                $.each(['menu', 'read', 'create', 'update', 'delete'], function (b, t) {
-                    permissoes[u.id][e][t] = false;
-                });
+                    $.each(['menu', 'read', 'create', 'update', 'delete'], function (b, t) {
+                        permissoes[u.id][e][t] = false;
+                    });
+                }
             });
         });
 
