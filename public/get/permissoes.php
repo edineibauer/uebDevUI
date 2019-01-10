@@ -2,20 +2,8 @@
 
 
 if (!empty($_SESSION['userlogin']) && $_SESSION['userlogin']['setor'] === "1") {
-    $data['data'] = [];
-    if (file_exists(PATH_HOME . "_config/permissoes.json")) {
-        $permit = json_decode(file_get_contents(PATH_HOME . "_config/permissoes.json"), true);
-
-        //convert true string para true boolean
-        foreach ($permit as $setor => $datum) {
-            foreach ($datum as $entity => $dados) {
-                foreach ($dados as $action => $value)
-                    $data['data'][$setor][$entity][$action] = $value === "true";
-            }
-        }
-
-    } else {
-
+    $data['data'] = \Config\Config::getPermission();
+   /*
         //obtém as entidades de sistema
         $entitySystem = [];
         foreach (\Helpers\Helper::listFolder(PATH_HOME . "entity/cache/info") as $item) {
@@ -53,6 +41,5 @@ if (!empty($_SESSION['userlogin']) && $_SESSION['userlogin']['setor'] === "1") {
                 }
                 break;
             }
-        }
-    }
+        }*/
 }
