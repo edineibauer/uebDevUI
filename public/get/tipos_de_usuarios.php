@@ -5,9 +5,9 @@ if (!empty($_SESSION['userlogin']) && $_SESSION['userlogin']['setor'] === "1") {
     $data['data'][] = ["id" => "0", "user" => "Anônimo"];
     foreach ($tipos as $tipo) {
         if ($tipo['column'] === "setor") {
-            foreach ($tipo['allow']['values'] as $i => $value) {
-                if ($value !== "1")
-                    $data['data'][] = ["id" => $value, "user" => $tipo['allow']['names'][$i]];
+            foreach ($tipo['allow']['options'] as $i => $value) {
+                if ($value['option'] !== "1")
+                    $data['data'][] = ["id" => $value['option'], "user" => $value['name']];
             }
             break;
         }
