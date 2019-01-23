@@ -250,20 +250,23 @@ function createTheme() {
 }
 
 function restoreTheme() {
-    toast("Restaurando Tema", 6000, "toast-success");
+    toast("Restaurando...", 1000, "toast-success");
     post('dev-ui', 'tema/restoreTheme', function (d) {
-        if (d === "no")
+        if (d === "no") {
             toast("tema anterior não encontrado", 3000, "toast-warning");
-        else
-            updateVersion();
+        } else {
+            toast("Tema Alterado", 2000, "toast-success");
+            setUpdateVersion();
+        }
     });
 }
 
 function saveTheme() {
     if(localStorage.txt) {
-        toast("Aplicando Tema", 6000, "toast-success");
+        toast("Aplicando...", 1000, "toast-success");
         post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
-            updateVersion();
+            toast("Tema Alterado", 2000, "toast-success");
+            setUpdateVersion();
         });
     } else {
         toast("selecione um tema antes", 3000, "toast-warning");
