@@ -249,29 +249,38 @@ function createTheme() {
     displayDemo(theme1);
 }
 
+var applyTheme = 0;
 function restoreTheme() {
-    toast("Restaurando...", 6000, "toast-success");
-    post('dev-ui', 'tema/restoreTheme', function (d) {
-        if (d === "no") {
-            toast("tema anterior não encontrado", 3000, "toast-warning");
-        } else {
-            setUpdateVersion();
-            clearCache().then(() => {
-                window.location.reload()
-            });
-        }
-    });
+    if(applyTheme === 0) {
+        applyTheme = 1;
+        toast("Restaurando...", 6000, "toast-success");
+        post('dev-ui', 'tema/restoreTheme', function (d) {
+            if (d === "no") {
+                toast("tema anterior não encontrado", 3000, "toast-warning");
+            } else {
+                toast("Tema Alterado", 1000, "toast-success");
+                setUpdateVersion();
+                clearCache().then(() => {
+                    window.location.reload()
+                });
+            }
+        });
+    }
 }
 
 function saveTheme() {
     if(localStorage.txt) {
-        toast("Aplicando...", 6000, "toast-success");
-        post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
-            setUpdateVersion();
-            clearCache().then(() => {
-                window.location.reload()
+        if(applyTheme === 0) {
+            applyTheme = 1;
+            toast("Aplicando...", 6000, "toast-success");
+            post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
+                toast("Tema Alterado", 1000, "toast-success");
+                setUpdateVersion();
+                clearCache().then(() => {
+                    window.location.reload()
+                });
             });
-        });
+        }
     } else {
         toast("selecione um tema antes", 3000, "toast-warning");
     }
