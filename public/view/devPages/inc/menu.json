@@ -35,7 +35,7 @@
     "file": "devPages/rotas"
   },
   {
-    "icon": "block",
+    "icon": "assignment_turned_in",
     "title": "Permissões",
     "action": "page",
     "lib": "dev-ui",
