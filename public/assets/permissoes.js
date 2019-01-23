@@ -19,7 +19,9 @@ $(function () {
             dbLocal.clear('__allow').then(() => {
                 dbLocal.exeCreate("__allow", allow);
             });
-        })
+        });
+
+        setUpdateVersion();
     });
 
     var permit = {
