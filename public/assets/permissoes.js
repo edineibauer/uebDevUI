@@ -1,7 +1,3 @@
-function loadResource(url) {
-    return getJSON(HOME + "get/" + url);
-}
-
 $(function () {
 
     $("#permissao-container").off("change", ".allow-menu-session").on("change", ".allow-menu-session", function () {
@@ -10,7 +6,20 @@ $(function () {
         let tipo = $(this).attr("data-tipo");
         permit.permissoes[user][entity][tipo] = $(this).prop("checked");
 
-        $.ajax({type: "POST", url: HOME + 'set', data: {lib: 'dev-ui', file: 'save/permissoes', dados: permit.permissoes}, dataType: "json"})
+        $.ajax({
+            type: "POST",
+            url: HOME + 'set',
+            data: {lib: 'dev-ui', file: 'save/permissoes', dados: permit.permissoes},
+            async: !1,
+            dataType: "json"
+        });
+
+        //atualiza lista de permissões
+        get("allow").then(allow => {
+            dbLocal.clear('__allow').then(() => {
+                dbLocal.exeCreate("__allow", allow);
+            });
+        })
     });
 
     var permit = {
@@ -20,41 +29,37 @@ $(function () {
     };
 
     //carrega os recursos
-    let pp = loadResource('permissoes');
-    let pe = loadResource('entidades');
-    let pt = loadResource('tipos_de_usuarios');
+    let pp = get('allow');
+    let pe = get('entidades');
+    let pt = get('tipos_de_usuarios');
 
     Promise.all([pp, pe, pt]).then(r => {
-        if(typeof r[0].data.js === "undefined" && typeof r[1].data.js === "undefined" && typeof r[2].data.js === "undefined") {
-            permit.users = r[2].data;
-            permit.entidades = r[1].data;
-            permit.permissoes = preenchePermissoesNaoDefinidas(r[0].data);
+        permit.users = r[2];
+        permit.entidades = r[1];
+        permit.permissoes = preenchePermissoesNaoDefinidas(r[0]);
 
-            //show list entity
-            getJSON(HOME + "get/tpl/allow-list-entity").then(tpl => {
-                $("#list-entity").html(
-                    Mustache.render(
-                        tpl.data['allow-list-entity'],
-                        {
-                            entidades: permit.entidades,
-                            familyName: function () {
-                                return function (text, render) {
-                                    return render(text).replaceAll('_', ' ');
-                                }
+        //show list entity
+        dbLocal.exeRead("__template", 1).then(tpl => {
+            $("#list-entity").html(
+                Mustache.render(
+                    tpl['allow-list-entity'],
+                    {
+                        entidades: permit.entidades,
+                        familyName: function () {
+                            return function (text, render) {
+                                return render(text).replaceAll('_', ' ');
                             }
                         }
-                    )
-                );
-            });
+                    }
+                )
+            );
 
             //show adm menu options
-            getJSON(HOME + "get/tpl/allow-entity-menu").then(tpl => {
-                let entidades = [];
-                $.each(permit.entidades, function (i, e) {
-                    entidades.push({entity: e, checked: permit.permissoes[1][e].menu});
-                });
-                $("#adm-allow-menu").html(Mustache.render(tpl.data['allow-entity-menu'], {entidades: entidades}));
+            let entidades = [];
+            $.each(permit.entidades, function (i, e) {
+                entidades.push({entity: e, checked: permit.permissoes[1][e].menu});
             });
+            $("#adm-allow-menu").html(Mustache.render(tpl['allow-entity-menu'], {entidades: entidades}));
 
             //show list user
             $.each(permit.users, function (a, u) {
@@ -69,33 +74,29 @@ $(function () {
             });
 
             //show users entity permissions
-            getJSON(HOME + "get/tpl/allow-user-table").then(tpl => {
-                $("#permissao").html(Mustache.render(tpl.data['allow-user-table'], {users: permit.users}));
-            });
-        } else {
-            toast("Falha na Conexão", 2000, "toast-warning");
-        }
+            $("#permissao").html(Mustache.render(tpl['allow-user-table'], {users: permit.users}));
+        });
     });
 
     function preenchePermissoesNaoDefinidas(permissoes) {
 
         //menu adm
-        if(typeof permissoes[1] === "undefined")
+        if (typeof permissoes[1] === "undefined")
             permissoes[1] = {};
 
         $.each(permit.entidades, function (b, e) {
-            if(typeof permissoes[1][e] === "undefined")
+            if (typeof permissoes[1][e] === "undefined")
                 permissoes[1][e] = {};
             permissoes[1][e]['menu'] = false;
         });
 
         //demais usuários
         $.each(permit.users, function (a, u) {
-            if(typeof permissoes[u.id] === "undefined")
+            if (typeof permissoes[u.id] === "undefined")
                 permissoes[u.id] = {};
 
             $.each(permit.entidades, function (b, e) {
-                if(typeof permissoes[u.id][e] === "undefined") {
+                if (typeof permissoes[u.id][e] === "undefined") {
                     permissoes[u.id][e] = {};
 
                     $.each(['menu', 'read', 'create', 'update', 'delete'], function (b, t) {
