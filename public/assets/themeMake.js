@@ -250,62 +250,20 @@ function createTheme() {
 }
 
 function restoreTheme() {
-    toast("Restaurando Tema", 8000, "toast-success");
+    toast("Restaurando Tema", 6000, "toast-success");
     post('dev-ui', 'tema/restoreTheme', function (d) {
-        if (d === "no") {
+        if (d === "no")
             toast("tema anterior não encontrado", 3000, "toast-warning");
-        } else {
-
-            post("dev-ui", "cache/update", {}, function () {
-                toast("Recarregando Arquivos...", 4000);
-
-                //delete service workers
-                navigator.serviceWorker.getRegistrations().then(function (registrations) {
-                    for (let registration of registrations) {
-                        registration.unregister()
-                    }
-                });
-
-                //delete caches
-                caches.keys().then(cacheNames => {
-                    return Promise.all(cacheNames.map(cacheName => {
-                        return caches.delete(cacheName)
-                    }))
-                });
-
-                setTimeout(function () {
-                    location.reload()
-                }, 700)
-            })
-        }
+        else
+            updateVersion();
     });
 }
 
 function saveTheme() {
     if(localStorage.txt) {
-        toast("Aplicando Tema", 8000, "toast-success");
+        toast("Aplicando Tema", 6000, "toast-success");
         post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
-            post("dev-ui", "cache/update", {}, function () {
-                toast("Recarregando Arquivos...", 4000);
-
-                //delete service workers
-                navigator.serviceWorker.getRegistrations().then(function (registrations) {
-                    for (let registration of registrations) {
-                        registration.unregister()
-                    }
-                });
-
-                //delete caches
-                caches.keys().then(cacheNames => {
-                    return Promise.all(cacheNames.map(cacheName => {
-                        return caches.delete(cacheName)
-                    }))
-                });
-
-                setTimeout(function () {
-                    location.reload()
-                }, 700)
-            })
+            updateVersion();
         });
     } else {
         toast("selecione um tema antes", 3000, "toast-warning");
