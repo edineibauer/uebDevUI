@@ -1,8 +1,6 @@
 <?php
-$tpl = new \Helpers\Template("dev-ui");
-$read = new \Conn\Read();
-
 //Garante criação dos dados de configuração caso não exista
+$read = new \Conn\Read();
 $read->exeRead(PRE . "config", "WHERE id=1");
 if (!$read->getResult()) {
 
@@ -20,9 +18,21 @@ if (!$read->getResult()) {
     $d->setData($criarData);
     $d->save();
 }
+?>
+<header class="container padding-bottom">
+    <h5>
+        <b><i class="material-icons left padding-right">settings</i> <span class="left">Configurações</span></b>
+    </h5>
+</header>
 
-$form = new \Form\Form("config");
-$form->setCallback("updateConfig");
-$dados['configForm'] = $form->getForm(1);
+<div class="col s12 padding-small">
+    <section class="card padding-8 border-bottom">
+        <header class="container col">
+            <h2>Informações do Site</h2>
+        </header>
 
-$data['data'] = $tpl->getShow('configuracoes', $dados);
+        <div class="col padding-medium font-medium" id="config-form-dev">
+        </div>
+    </section>
+</div>
+<script src="<?= HOME ?>assetsPublic/view/configuracoes.min.js" defer></script>

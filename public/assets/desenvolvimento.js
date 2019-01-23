@@ -16,12 +16,16 @@ $(function () {
         })
     });
     $("#clear-cache").off("click").on("click", function () {
-        toast("Atualizando Sistema...", 7000);
-        post("dev-ui", "cache/update", {}, function () {
-            toast("Recarregando Arquivos...", 4000);
-            setTimeout(function () {
-                location.reload()
-            }, 700)
+        post('route', 'internet', {}, function (g) {
+            if(g === 1) {
+                toast("Atualizando Sistema...", 7000);
+                clearCache().then(() => {
+                    post("dev-ui", "cache/update", {}, function () {
+                        toast("Recarregando Arquivos...", 3000);
+                        location.reload()
+                    })
+                });
+            }
         })
     });
 })
