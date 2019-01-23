@@ -14,7 +14,7 @@
         <div class="left margin-right" id="permissao-container">
             <div class="col padding-right" style="width: 170px">
                 <div class="col card">
-                    <header class="container color-gray-light">
+                    <header class="container color-gray-light" style="height: 106px;">
                         <h1 class="font-large">Entidades</h1>
 
                         <div class="container padding-0 padding-12" style="padding-bottom: 17px!important;">
@@ -28,8 +28,8 @@
 
             <div class="col padding-right" style="width: 75px">
                 <div class="col card">
-                    <header class="col padding-small color-gray-light" style="padding-top: 0!important;">
-                        <h1 class="font-large">ADM</h1>
+                    <header class="col padding-small color-gray-light" style="height: 106px;padding-top: 0!important;">
+                        <h1 class="font-large">DEV</h1>
 
                         <div class="container padding-0" style="padding-left: 5px!important;">
                             <div title="menu" class="padding-tiny left">

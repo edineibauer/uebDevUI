@@ -5,7 +5,7 @@ if (empty($_SESSION['userlogin'])) {
     $data['data'] = HOME . "login";
 } elseif($_SESSION['userlogin']['setor'] !== "1") {
     $data['response'] = 3;
-    $data['data'] = HOME . "logout";
+    $data['data'] = HOME . "dashboard";
 } else {
     ob_start();
     ?>
