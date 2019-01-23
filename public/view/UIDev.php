@@ -38,7 +38,7 @@ if (empty($_SESSION['userlogin'])) {
     </nav>
 
     <div class="main dashboard-main">
-        <div id="dashboard" class="dashboard-tab container row"></div>
+        <div id="dashboard" class="dashboard-tab col"></div>
     </div>
 
     <?php
