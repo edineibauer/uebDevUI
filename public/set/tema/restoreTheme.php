@@ -11,6 +11,8 @@ if(file_exists(PATH_HOME . "public/assets/theme-recovery.min.css")) {
     fwrite($f, $atual);
     fclose($f);
 
+    include_once 'reloadCoreCss.php';
+
     $data['data'] = "ok";
 
 } else {
