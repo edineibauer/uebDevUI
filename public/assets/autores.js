@@ -1,15 +1,19 @@
 $(function () {
     let dicionarios = dbLocal.exeRead("__dicionario", 1);
+    let info = dbLocal.exeRead("__info", 1);
     let tpl = dbLocal.exeRead("__template", 1);
-    Promise.all([dicionarios, tpl]).then(r => {
+    Promise.all([dicionarios, info, tpl]).then(r => {
         dicionarios = r[0];
-        tpl = r[1];
+        info = r[1];
+        tpl = r[2];
 
         let entitys = [];
         let classe = 'color-gray-light';
         $.each(dicionarios, function (entity, meta) {
-            classe = (classe === 'color-white' ? 'color-gray-light' : 'color-white');
-            entitys.push({class: classe, entity: entity});
+            if(typeof info[entity].autor !== "undefined" && info[entity].autor === 1 || info[entity].autor === 2) {
+                classe = (classe === 'color-white' ? 'color-gray-light' : 'color-white');
+                entitys.push({class: classe, entity: entity});
+            }
         })
 
         $("#autor-list-dev").html(Mustache.render(tpl['autor-list-entity'], {entidades: entitys}));
