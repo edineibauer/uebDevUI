@@ -81,15 +81,15 @@ $(function () {
     });
 
     function preenchePermissoesNaoDefinidas(permissoes) {
-
         //menu adm
         if (typeof permissoes[1] === "undefined")
             permissoes[1] = {};
 
         $.each(permit.entidades, function (b, e) {
-            if (typeof permissoes[1][e] === "undefined")
+            if (typeof permissoes[1][e] === "undefined") {
                 permissoes[1][e] = {};
-            permissoes[1][e]['menu'] = false;
+                permissoes[1][e]['menu'] = false;
+            }
         });
 
         //demais usuários
