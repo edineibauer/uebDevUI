@@ -1,1 +1,1 @@
-$("#autor-list-dev").grid("usuarios");
+$("#autor-list-dev").grid("teste", [], {autor: true, update: false, delete: false, status: false});
