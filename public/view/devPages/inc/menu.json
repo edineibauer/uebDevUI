@@ -42,6 +42,13 @@
     "file": "devPages/permissoes"
   },
   {
+    "icon": "account_box",
+    "title": "Autores",
+    "action": "page",
+    "lib": "dev-ui",
+    "file": "devPages/autores"
+  },
+  {
     "icon": "settings_ethernet",
     "title": "Desenvolvimento",
     "action": "page",

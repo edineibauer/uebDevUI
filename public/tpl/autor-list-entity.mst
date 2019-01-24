@@ -1,0 +1,16 @@
+<div class="col padding-32">
+    <div class="card">
+        {{#entidades}}
+            <div class="container padding-large padding-8 {{class}}">
+                <div class="left padding-small">
+                    {{entity}}
+                </div>
+                <div class="right">
+                    <button class="btn theme hover-shadow btn-edit-autor" rel="{{entity}}">
+                        Gerenciar Permissão
+                    </button>
+                </div>
+            </div>
+        {{/entidades}}
+    </div>
+</div>
