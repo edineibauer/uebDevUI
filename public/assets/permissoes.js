@@ -44,8 +44,6 @@ $(function () {
 
         permit.permissoes = preenchePermissoesNaoDefinidas(r[0]);
 
-        console.log(permit.entidades);
-
         //show list entity
         dbLocal.exeRead("__template", 1).then(tpl => {
             $("#list-entity").html(
