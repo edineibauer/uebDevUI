@@ -31,14 +31,20 @@ $(function () {
     };
 
     //carrega os recursos
-    let pp = get('allow');
-    let pe = get('entidades');
+    let pp = dbLocal.exeRead('__allow', 1);
+    let pe = dbLocal.exeRead('__dicionario', 1);
     let pt = get('tipos_de_usuarios');
 
     Promise.all([pp, pe, pt]).then(r => {
         permit.users = r[2];
-        permit.entidades = r[1];
+        let dicionarios = r[1];
+        permit.entidades = [];
+        for(let k in dicionarios)
+            permit.entidades.push(k);
+
         permit.permissoes = preenchePermissoesNaoDefinidas(r[0]);
+
+        console.log(permit.entidades);
 
         //show list entity
         dbLocal.exeRead("__template", 1).then(tpl => {
