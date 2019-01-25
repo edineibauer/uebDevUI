@@ -18,7 +18,6 @@ function requestDashboardContent(file) {
 }
 
 function requestDashboardEntity(entity) {
-    mainLoading();
     post("table", "api", {entity: entity}, function (data) {
         setDashboardContent(data)
     })
@@ -32,6 +31,7 @@ function setDashboardContent(content) {
 $(function () {
     $("#core-content, #core-applications").off("click", ".menu-li").on("click", ".menu-li", function () {
         let action = $(this).attr("data-action");
+        mainLoading();
         if (action === "table") {
             requestDashboardEntity($(this).attr("data-entity"))
         } else if (action === 'form') {
