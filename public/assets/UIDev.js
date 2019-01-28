@@ -11,7 +11,6 @@ function mainLoading() {
 }
 
 function requestDashboardContent(file) {
-    mainLoading();
     view(file, function (data) {
         setDashboardContent(data.content)
     })
