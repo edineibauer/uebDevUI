@@ -29,7 +29,7 @@
             <div class="col padding-right" style="width: 75px">
                 <div class="col card">
                     <header class="col padding-small color-gray-light" style="height: 106px;padding-top: 0!important;">
-                        <h1 class="font-large">DEV</h1>
+                        <h1 class="font-large">ADM</h1>
 
                         <div class="container padding-0" style="padding-left: 5px!important;">
                             <div title="menu" class="padding-tiny left">
