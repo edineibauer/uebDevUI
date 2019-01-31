@@ -32,4 +32,18 @@ if ($data['response'] === 1 && !empty($data['data'])) {
 
     $minifier->add(PATH_HOME . "public/assets/theme.min.css");
     $minifier->minify(PATH_HOME . "assetsPublic/core.min.css");
+
+
+    //Atualiza Manifest
+    $dados = json_decode(file_get_contents(PATH_HOME . "_config/config.json"), true);
+    $themeFile = file_get_contents(PATH_HOME . "public/assets/theme.min.css");
+    $theme = explode("}", explode(".theme{", $themeFile)[1])[0];
+    $themed = explode("}", explode(".theme-d1{", $themeFile)[1])[0];
+    $themeBack = explode("!important", explode("background-color:", $theme)[1])[0];
+    $themeBackd = explode("!important", explode("background-color:", $themed)[1])[0];
+    $content = str_replace(['{$sitename}', '{$theme}', '{$themed}'], [$dados['sitename'], $themeBack, $themeBackd], file_get_contents(PATH_HOME . VENDOR . "config/public/installTemplates/manifest.txt"));
+
+    $fp = fopen(PATH_HOME . "manifest.json", "w");
+    fwrite($fp, $content);
+    fclose($fp);
 }
