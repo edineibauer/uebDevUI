@@ -27,7 +27,17 @@ function setDashboardContent(content) {
         $("#dashboard").html(content === "no-network" ? "Ops! Conexão Perdida" : content)
 }
 
+function devSidebarInfo() {
+    if(getCookie("imagem") === "") {
+        document.querySelector("#dashboard-sidebar-imagem").innerHTML = "<div id='core-sidebar-perfil-img'><i class='material-icons'>people</i></div>";
+    } else {
+        document.querySelector("#dashboard-sidebar-imagem").innerHTML = "<img src='" + decodeURIComponent(getCookie("imagem")) + "&h=80&w=80' height='60' width='60'>";
+    }
+    document.querySelector("#dashboard-sidebar-nome").innerHTML = getCookie("nome");
+}
+
 $(function () {
+    devSidebarInfo();
     $("#core-content, #core-applications").off("click", ".menu-li").on("click", ".menu-li", function () {
         let action = $(this).attr("data-action");
         mainLoading();
