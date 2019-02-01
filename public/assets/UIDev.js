@@ -34,9 +34,8 @@ $(function () {
         if (action === "table") {
             requestDashboardEntity($(this).attr("data-entity"))
         } else if (action === 'form') {
-            post("form", "api", {entity: attr}, function (data) {
-                setDashboardContent(data)
-            })
+            let id = !isNaN($(this).attr("data-atributo")) && $(this).attr("data-atributo") > 0 ? parseInt($(this).attr("data-atributo")) : null;
+            $("#dashboard").html("").form($(this).attr("data-entity"), id);
         } else if (action === 'page') {
             requestDashboardContent($(this).attr("data-atributo"))
         } else if (action === 'link') {
