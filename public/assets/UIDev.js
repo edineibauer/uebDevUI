@@ -47,7 +47,7 @@ $(function () {
         mainLoading();
         if (action === 'form') {
             let id = !isNaN($(this).attr("data-atributo")) && $(this).attr("data-atributo") > 0 ? parseInt($(this).attr("data-atributo")) : null;
-            $("#dashboard").html("").form($(this).attr("data-entity"), id);
+            $("#dashboard").html("").form($(this).attr("data-entity"), id, typeof $(this).attr("data-fields") !== "undefined" ? JSON.parse($(this).attr("data-fields")) : "undefined")
         } else if (action === 'page') {
             view($(this).attr("data-atributo"), function (data) {
                 if (typeof (data.content) === "string")
