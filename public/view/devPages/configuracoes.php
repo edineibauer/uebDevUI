@@ -10,8 +10,8 @@ if (!$read->getResult()) {
         "descricao" => defined('SITEDESC') && !empty(SITEDESC) ? SITEDESC : "",
         "https" => defined('PROTOCOL') && !empty(PROTOCOL) && PROTOCOL === "https://" ? 1 : 0,
         "www" => defined('WWW') && !empty(WWW) && WWW === "www" ? 1 : 0,
-        "logo" => defined('LOGO') && !empty(LOGO) ? '[{"url": "' . LOGO . '", "name": "", "size": 1078, "type": "image/png"}]' : null,
-        "favicon" => defined('FAVICON') && !empty(FAVICON) ? '[{"url": "' . FAVICON . '", "name": "", "size": 1078, "type": "image/png"}]' : null,
+        "logo" => defined('LOGO') && !empty(LOGO) ? '[{"url": "' . LOGO . '", "name": "logo", "nome": "logo", "size": 66582, "type": "png", "image": "' . LOGO . '", "fileType": "image/png", "sizeName": "66KB"}]' : null,
+        "favicon" => defined('FAVICON') && !empty(FAVICON) ? '[{"url": "' . FAVICON . '", "name": "favicon", "nome": "favicon", "size": 66582, "type": "png", "image": "' . FAVICON . '", "fileType": "image/png", "sizeName": "66KB"}]' : null,
     ];
 
     $d = new \Entity\Dicionario("config");
