@@ -2,11 +2,11 @@
     <h5 class="left">
         <b><i class="material-icons left padding-right">assignment_turned_in</i> <span class="left">Gerenciamento de Permissões CRUD para Usuários</span></b>
     </h5>
-    <div class="right padding-large padding-16">
+    <!--<div class="right padding-large padding-16">
         <button class="btn theme opacity hover-opacity-off hover-shadow" id="newUserType">
             Novo Tipo de Usuário
         </button>
-    </div>
+    </div>-->
 </header>
 
 <section class="col padding-32 border-bottom">
