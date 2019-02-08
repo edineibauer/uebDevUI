@@ -7,11 +7,18 @@
     "file": "UIEntidades"
   },
   {
-    "icon": "format_paint",
-    "title": "Tema",
+    "icon": "assignment_turned_in",
+    "title": "Permissões",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/tema"
+    "file": "devPages/permissoes"
+  },
+  {
+    "icon": "account_box",
+    "title": "Autores",
+    "action": "page",
+    "lib": "dev-ui",
+    "file": "devPages/autores"
   },
   {
     "icon": "settings",
@@ -19,6 +26,13 @@
     "action": "page",
     "lib": "dev-ui",
     "file": "devPages/configuracoes"
+  },
+  {
+    "icon": "format_paint",
+    "title": "Tema",
+    "action": "page",
+    "lib": "dev-ui",
+    "file": "devPages/tema"
   },
   {
     "icon": "settings_input_component",
@@ -35,24 +49,17 @@
     "file": "devPages/rotas"
   },
   {
-    "icon": "assignment_turned_in",
-    "title": "Permissões",
-    "action": "page",
-    "lib": "dev-ui",
-    "file": "devPages/permissoes"
-  },
-  {
-    "icon": "account_box",
-    "title": "Autores",
-    "action": "page",
-    "lib": "dev-ui",
-    "file": "devPages/autores"
-  },
-  {
     "icon": "settings_ethernet",
     "title": "Desenvolvimento",
     "action": "page",
     "lib": "dev-ui",
     "file": "devPages/desenvolvimento"
+  },
+  {
+    "icon": "home",
+    "title": "Painel",
+    "action": "link",
+    "lib": "dev-ui",
+    "file": "dashboard"
   }
 ]
