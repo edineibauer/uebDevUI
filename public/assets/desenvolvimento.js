@@ -18,10 +18,10 @@ $(function () {
     $("#clear-cache").off("click").on("click", function () {
         post('route', 'internet', {}, function (g) {
             if(g === 1) {
-                toast("Atualizando Sistema...", 7000);
+                toast("Atualizando Sistema...", 10000);
                 post("dev-ui", "cache/update", {}, function () {
                     toast("Recarregando Arquivos...", 3000);
-                    location.reload()
+                    location.reload(!0)
                 })
             }
         })
