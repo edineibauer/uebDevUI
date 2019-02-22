@@ -98,7 +98,7 @@ $(function () {
 
         //demais usuários
         $.each(permit.users, function (a, u) {
-            if (typeof permissoes[u.id] === "undefined")
+            if (typeof permissoes[u.id] === "undefined" || permissoes[u.id] === "")
                 permissoes[u.id] = {};
 
             $.each(permit.entidades, function (b, e) {
