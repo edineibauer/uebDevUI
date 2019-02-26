@@ -11,8 +11,8 @@
 
 <section class="col padding-32 border-bottom">
     <div class="container">
-        <div class="left margin-right" id="permissao-container">
-            <div class="col padding-right" style="width: 170px">
+        <div class="left margin-right" style="width: 10000px" id="permissao-container">
+            <div class="left padding-right" style="width: 170px">
                 <div class="col card">
                     <header class="container color-gray-light" style="height: 106px;">
                         <h1 class="font-large">Entidades</h1>
@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            <div class="col padding-right" style="width: 75px">
+            <div class="left padding-right" style="width: 75px">
                 <div class="col card">
                     <header class="col padding-small color-gray-light" style="height: 106px;padding-top: 0!important;">
                         <h1 class="font-large">ADM</h1>
@@ -42,7 +42,7 @@
                 </div>
             </div>
 
-            <div class="rest" id="permissao"></div>
+            <div class="left" id="permissao"></div>
         </div>
     </div>
 </section>
