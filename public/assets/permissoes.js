@@ -81,7 +81,7 @@ $(function () {
 
             //show users entity permissions
             $("#permissao").html(Mustache.render(tpl['allow-user-table'], {users: permit.users}));
-            $("#permissao-container").width($("#permissao").width() + 245 + "px");
+            $("#permissao-container").width($("#permissao").width() + 75 + "px");
         });
     });
 
