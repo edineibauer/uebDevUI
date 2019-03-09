@@ -2,11 +2,6 @@
     <h5 class="left">
         <b><i class="material-icons left padding-right">assignment_turned_in</i> <span class="left">Gerenciamento de Permissões CRUD para Usuários</span></b>
     </h5>
-    <!--<div class="right padding-large padding-16">
-        <button class="btn theme opacity hover-opacity-off hover-shadow" id="newUserType">
-            Novo Tipo de Usuário
-        </button>
-    </div>-->
 </header>
 
 <section class="col padding-32 border-bottom">
@@ -50,4 +45,4 @@
     </div>
 </section>
 
-<script src="<?= HOME . VENDOR ?>dev-ui/public/assets/permissoes.js"></script>
+<script src="<?= HOME ?>assetsPublic/view/permissoes.min.js?v=<?=VERSION?>"></script>
