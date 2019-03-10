@@ -33,8 +33,6 @@ $(function () {
         }
         permit.permissoes = preenchePermissoesNaoDefinidas(r[0]);
 
-        console.log(permit);
-
         dbLocal.exeRead("__template", 1).then(tpl => {
             $("#list-entity").html(Mustache.render(tpl['allow-list-entity'], {
                 entidades: permit.entidades,
@@ -59,7 +57,6 @@ $(function () {
                     u.entitys.push(ee)
                 })
             });
-            console.log(permit.users);
             $("#permissao").html(Mustache.render(tpl['allow-user-table'], {users: permit.users}));
             $("#permissao-container").width($("#permissao").width() + 75 + "px")
         })
