@@ -21,6 +21,7 @@ $(function () {
     let pt = dbLocal.exeRead('__info', 1);
     Promise.all([pp, pt]).then(r => {
 
+        permit.users.push({id: "0", user: "Anônimo"})
         $.each(r[1], function(entity, meta) {
             if(typeof meta.user === "number" && meta.user)
                 permit.users.push({id: entity, user: ucFirst(entity.replaceAll('_', ' '))})
