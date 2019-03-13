@@ -162,37 +162,42 @@ function createTheme() {
     z.style.color = col;
     theme1.td5 = col;
 
-    txt = ".theme-l5 {color:" + theme1.tl5 + " !important; background-color:" + theme1.l5 +" !important}<br>";
-    txt += ".theme-l4 {color:" + theme1.tl4 + " !important; background-color:" + theme1.l4 +" !important}<br>";
-    txt += ".theme-l3 {color:" + theme1.tl3 + " !important; background-color:" + theme1.l3 +" !important}<br>";
-    txt += ".theme-l2 {color:" + theme1.tl2 + " !important; background-color:" + theme1.l2 +" !important}<br>";
-    txt += ".theme-l1 {color:" + theme1.tl1 + " !important; background-color:" + theme1.l1 +" !important}<br>";
-    txt += ".theme-d1 {color:" + theme1.td1 + " !important; background-color:" + theme1.d1 +" !important}<br>";
+    txt = ".theme-d1 {color:" + theme1.td1 + " !important; background-color:" + theme1.d1 +" !important}<br>";
     txt += ".theme-d2 {color:" + theme1.td2 + " !important; background-color:" + theme1.d2 +" !important}<br>";
     txt += ".theme-d3 {color:" + theme1.td3 + " !important; background-color:" + theme1.d3 +" !important}<br>";
     txt += ".theme-d4 {color:" + theme1.td4 + " !important; background-color:" + theme1.d4 +" !important}<br>";
     txt += ".theme-d5 {color:" + theme1.td5 + " !important; background-color:" + theme1.d5 +" !important}<br><br>";
 
-    txt += ".theme-light {color:" + theme1.tl5 + " !important; background-color:" + theme1.l5 +" !important}<br>";
     txt += ".theme-dark {color:" + theme1.td5 + " !important; background-color:" + theme1.d5 +" !important}<br>";
-    txt += ".theme-action {color:" + theme1.td5 + " !important; background-color:" + theme1.d5 +" !important}<br><br>";
 
     txt += ".theme {color:" + theme1.td0 + " !important; background-color:" + theme1.d0 +" !important}<br>";
     txt += ".theme-aux {background-color:" + theme1.td0 + " !important}<br>";
     txt += ".theme-text-aux {color:" + theme1.td0 + " !important}<br>";
-    txt += ".theme-text, input:focus ~ label {color:" + theme1.d0 + " !important}<br>";
-    txt += ".theme-text-l {color:" + theme1.l2 + " !important}<br>";
     txt += ".theme-text-d {color:" + theme1.d2 + " !important}<br>";
-    txt += ".theme-border {border-color:" + theme1.d0 + " !important}<br><br>";
-    txt += ".theme-border-l {border-color:" + theme1.l2 + " !important}<br><br>";
     txt += ".theme-border-d {border-color:" + theme1.d2 + " !important}<br><br>";
-
-    txt += ".theme-hover:hover {color:" + theme1.td0 + " !important; background-color:" + theme1.d0 +" !important}<br>";
-    txt += ".theme-text-hover:hover {color:" + theme1.d0 + " !important}<br>";
-    txt += ".theme-border-hover:hover {border-color:" + theme1.d0 + " !important}<br>";
 
     /* SWITCH STYLE */
     if(theme1.d0 !== "#ffffff") {
+
+        txt += ".theme-l5 {color:" + theme1.tl5 + " !important; background-color:" + theme1.l5 +" !important}<br>";
+        txt += ".theme-l4 {color:" + theme1.tl4 + " !important; background-color:" + theme1.l4 +" !important}<br>";
+        txt += ".theme-l3 {color:" + theme1.tl3 + " !important; background-color:" + theme1.l3 +" !important}<br>";
+        txt += ".theme-l2 {color:" + theme1.tl2 + " !important; background-color:" + theme1.l2 +" !important}<br>";
+        txt += ".theme-l1 {color:" + theme1.tl1 + " !important; background-color:" + theme1.l1 +" !important}<br>";
+
+        txt += ".theme-light {color:" + theme1.tl5 + " !important; background-color:" + theme1.l5 +" !important}<br>";
+        txt += ".theme-text, input:focus ~ label {color:" + theme1.d0 + " !important}<br>";
+        txt += ".theme-text-l {color:" + theme1.l2 + " !important}<br>";
+        txt += ".theme-border {border-color:" + theme1.d0 + " !important}<br><br>";
+        txt += ".theme-border-l {border-color:" + theme1.l2 + " !important}<br><br>";
+        txt += ".theme-text-hover:hover {color:" + theme1.d0 + " !important}<br>";
+        txt += ".theme-border-hover:hover {border-color:" + theme1.d0 + " !important}<br>";
+        txt += ".theme-hover:hover {color:" + theme1.td0 + " !important; background-color:" + theme1.d0 +" !important}<br>";
+
+
+        /* TEMA ADICONAL PARA TROCA DE ELEMENTOS PADRÕES */
+        /*===================================================*/
+
         txt += ".switch input:checked + .slider {background-color:" + theme1.l2 + "!important}<br>";
         txt += ".switch input:checked + .slider:after {background-color:" + theme1.d0 + "!important}<br>";
 
@@ -209,6 +214,21 @@ function createTheme() {
         /* LOADING LINE STYLE */
         txt += "@keyframes loading {0% {left: 0;width: 0;background: " + theme1.d1 + ";}20% {width: 120px}100% {left: 100%;width: 0;background: " + theme1.d3 + "}}";
         txt += "@-webkit-keyframes loading {0% {left: 0;width: 0;background: " + theme1.d1 + ";}20% {width: 120px}100% {left: 100%;width: 0;background: " + theme1.d3 + "}}";
+
+    } else {
+        txt += ".theme-l5 {color:#666666 !important; background-color:#bbbbbb !important}<br>";
+        txt += ".theme-l4 {color:#666666 !important; background-color:#cccccc !important}<br>";
+        txt += ".theme-l3 {color:#666666 !important; background-color:#dddddd !important}<br>";
+        txt += ".theme-l2 {color:#666666 !important; background-color:#eeeeee !important}<br>";
+        txt += ".theme-l1 {color:#666666 !important; background-color:#fbfbfb !important}<br>";
+
+        txt += ".theme-text, input:focus ~ label {color:#666666 !important}<br>";
+        txt += ".theme-text-l {color:#bbbbbb !important}<br>";
+        txt += ".theme-border {border-color:#dddddd !important}<br><br>";
+        txt += ".theme-border-l {border-color:#eeeeee !important}<br><br>";
+        txt += ".theme-text-hover:hover {color:#666666 !important}<br>";
+        txt += ".theme-border-hover:hover {border-color:#dddddd !important}<br>";
+        txt += ".theme-hover:hover {color:#333333 !important; background-color:#eeeeee !important}<br>";
     }
 
     localStorage.setItem('txt', txt);
