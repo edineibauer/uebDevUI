@@ -227,8 +227,8 @@ function createTheme() {
         txt += ".theme-border {border-color:#dddddd !important}<br><br>";
         txt += ".theme-border-l {border-color:#eeeeee !important}<br><br>";
         txt += ".theme-text-hover:hover {color:#666666 !important}<br>";
-        txt += ".theme-border-hover:hover {border-color:#dddddd !important}<br>";
-        txt += ".theme-hover:hover {color:#333333 !important; background-color:#eeeeee !important}<br>";
+        txt += ".theme-border-hover:hover {border-color:#FFFFFF !important}<br>";
+        txt += ".theme-hover:hover {color:#333333 !important; background-color:#FFFFFF !important}<br>";
     }
 
     localStorage.setItem('txt', txt);
