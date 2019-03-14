@@ -15,6 +15,10 @@ html {
     height: 34px
 }
 
+.list-entity {
+    overflow: hidden;
+}
+
 .dashboard-main {
     margin-left: 200px
 }
