@@ -45,7 +45,9 @@ $(function () {
     $("body").off("click", ".menu-li").on("click", ".menu-li", function () {
         let action = $(this).attr("data-action");
         mainLoading();
-        if (action === 'form') {
+        if (action === "table") {
+            $("#dashboard").html("").grid($(this).attr("data-entity"))
+        } else if (action === 'form') {
             let id = !isNaN($(this).attr("data-atributo")) && $(this).attr("data-atributo") > 0 ? parseInt($(this).attr("data-atributo")) : null;
             $("#dashboard").html("").form($(this).attr("data-entity"), id, typeof $(this).attr("data-fields") !== "undefined" ? JSON.parse($(this).attr("data-fields")) : "undefined")
         } else if (action === 'page') {

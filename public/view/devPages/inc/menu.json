@@ -49,6 +49,12 @@
     "file": "devPages/rotas"
   },
   {
+    "icon": "compare_arrows",
+    "title": "APIs",
+    "action": "table",
+    "entity": "api_chave"
+  },
+  {
     "icon": "settings_ethernet",
     "title": "Desenvolvimento",
     "action": "page",
