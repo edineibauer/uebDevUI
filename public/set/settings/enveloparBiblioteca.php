@@ -2,6 +2,7 @@
 
 use Helpers\Helper;
 
+$data['data'] = "0";
 try {
 //copia entidades
     if (file_exists(PATH_HOME . "entity/cache")) {

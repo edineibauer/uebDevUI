@@ -10,43 +10,25 @@
     </header>
 
     <div class="container">
-        <div class="left padding-medium padding-16">
-            <button id="clear-cache" class="btn hover-shadow">
-                <i class="material-icons left padding-right" title="atualiza a versão do sistema forçadamente">info</i>
+        <div class="left padding-small padding-16">
+            <button id="clear-cache" class="btn hover-shadow margin-0 opacity hover-opacity-off">
+                <i class="material-icons left padding-right" title="Atualiza a versão do sistema, recarregando arquivos bases como: assets, cores e caches.">info</i>
                 <span class="left padding-tiny">Atualizar Versão</span>
             </button>
         </div>
-        <div class="left padding-medium padding-16">
-            <button id="envelopar-lib" class="btn hover-shadow">
-                <i class="material-icons left padding-right" title="carrega arquivos de desenvolvimento local para subir para o controlador de versão">info</i>
-                <span class="left padding-tiny">Envelopar Biblioteca</span>
+        <div class="left padding-small padding-16">
+            <button id="envelopar-lib" class="btn hover-shadow margin-0 opacity hover-opacity-off">
+                <i class="material-icons left padding-right" title="Carrega as entidades para o controlador de versão.">info</i>
+                <span class="left padding-tiny">Envelopar Entidades</span>
+            </button>
+        </div>
+        <div class="left padding-small padding-16">
+            <button id="envelopar-system" class="btn hover-shadow margin-0 opacity hover-opacity-off">
+                <i class="material-icons left padding-right" title="Carrega as configurações para o controlador de versão.">info</i>
+                <span class="left padding-tiny">Envelopar Sistema</span>
             </button>
         </div>
     </div>
 </section>
-
-{*
-<section class="card padding-8 border-bottom">
-    <header class="container col">
-        <h2>Reautorar Conteúdo sem Autor
-            <i class="material-icons" style="cursor: default"
-               title="quando um usuário é excluído, o conteúdo produzido por este usuário fica sem autor, nomeie outra autoridade como autor de conteúdos sem autor.">info</i>
-        </h2>
-    </header>
-
-    <div class="container">
-        <div class="left margin-right">
-            <select id="selectReautor">
-                {$reautor}
-            </select>
-        </div>
-        <div class="left margin-right">
-            <button class="btn color-teal" id="reautorar"><i
-                        class="material-icons left padding-right">save</i>Reautorar
-            </button>
-        </div>
-    </div>
-</section>
-*}
 
 <script src="{$home}{$vendor}dev-ui/public/assets/desenvolvimento.js?v={$version}"></script>

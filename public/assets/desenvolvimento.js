@@ -6,12 +6,22 @@ $(function () {
         })
     });
     $("#envelopar-lib").off("click").on("click", function () {
-        toast("Envelopando...", 3000);
+        toast("Separando as Entidades...", 3000);
         post("dev-ui", "settings/enveloparBiblioteca", {}, function (g) {
             if (g === "1") {
                 toast("Tudo Pronto!", 2000, "toast-success")
             } else {
-                toast("Erro ao envelopar", 3000, "toast-error")
+                toast("Erro ao Processar", 3000, "toast-error")
+            }
+        })
+    });
+    $("#envelopar-system").off("click").on("click", function () {
+        toast("Salvando Configurações...", 3000);
+        post("dev-ui", "settings/enveloparSistema", {}, function (g) {
+            if (g === "1") {
+                toast("Tudo Pronto!", 2000, "toast-success")
+            } else {
+                toast("Erro ao Processar", 3000, "toast-error")
             }
         })
     });
