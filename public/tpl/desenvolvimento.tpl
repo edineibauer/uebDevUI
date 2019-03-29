@@ -25,7 +25,7 @@
         <div class="left padding-small padding-16">
             <button id="envelopar-system" class="btn hover-shadow margin-0 opacity hover-opacity-off">
                 <i class="material-icons left padding-right" title="Carrega as configurações para o controlador de versão.">info</i>
-                <span class="left padding-tiny">Envelopar Sistema</span>
+                <span class="left padding-tiny">Criar Tema de Sistema</span>
             </button>
         </div>
     </div>
