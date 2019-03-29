@@ -24,6 +24,9 @@ try {
     if(file_exists(PATH_HOME . "uploads/site/logo.png"))
         copy(PATH_HOME . "uploads/site/logo.png", PATH_HOME . "public/_config/logo.png");
 
+    if(file_exists(PATH_HOME . "entity/general/general_info.json"))
+        copy(PATH_HOME . "entity/general/general_info.json", PATH_HOME . "public/_config/general_info.json");
+
     $data['data'] = "1";
 } catch (Exception $e) {
 }
