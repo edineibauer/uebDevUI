@@ -229,6 +229,10 @@ function createTheme() {
         txt += ".theme-text-hover:hover {color:#666666 !important}<br>";
         txt += ".theme-border-hover:hover {border-color:#FFFFFF !important}<br>";
         txt += ".theme-hover:hover {color:#333333 !important; background-color:#FFFFFF !important}<br>";
+
+        /* LOADING LINE STYLE */
+        txt += "@keyframes loading {0% {left: 0;width: 0;background: " + theme1.d4 + ";}20% {width: 120px}100% {left: 100%;width: 0;background: " + theme1.d5 + "}}";
+        txt += "@-webkit-keyframes loading {0% {left: 0;width: 0;background: " + theme1.d4 + ";}20% {width: 120px}100% {left: 100%;width: 0;background: " + theme1.d5 + "}}";
     }
 
     localStorage.setItem('txt', txt);
