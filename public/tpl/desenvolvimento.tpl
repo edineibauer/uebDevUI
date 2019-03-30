@@ -19,7 +19,7 @@
         <div class="left padding-small padding-16">
             <button id="envelopar-lib" class="btn hover-shadow margin-0 opacity hover-opacity-off">
                 <i class="material-icons left padding-right" title="Carrega as entidades para o controlador de versão.">info</i>
-                <span class="left padding-tiny">Envelopar Entidades</span>
+                <span class="left padding-tiny">Armazenar Entidades</span>
             </button>
         </div>
         <div class="left padding-small padding-16">
