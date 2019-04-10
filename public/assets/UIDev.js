@@ -52,8 +52,17 @@ $(function () {
             $("#dashboard").html("").form($(this).attr("data-entity"), id, typeof $(this).attr("data-fields") !== "undefined" ? JSON.parse($(this).attr("data-fields")) : "undefined")
         } else if (action === 'page') {
             view($(this).attr("data-atributo"), function (data) {
-                if (typeof (data.content) === "string")
-                    $("#dashboard").html(data.content === "no-network" ? "Ops! Conexão Perdida" : data.content)
+                if (typeof (data.content) === "string") {
+                    if(data.content === "no-network") {
+                        $("#dashboard").html("Ops! Conexão Perdida");
+                    } else {
+                        $("#dashboard").html(data.content);
+                        if (data.js.length)
+                            $.cachedScript(data.js);
+                        if(data.css.length)
+                            $("#core-style").prepend(data.css);
+                    }
+                }
             })
         }
     });
