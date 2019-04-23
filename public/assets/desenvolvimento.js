@@ -6,7 +6,7 @@ $(function () {
         })
     });
     $("#envelopar-lib").off("click").on("click", function () {
-        toast("Separando as Entidades...", 3000);
+        toast("Separando as Entidades...", 2000);
         post("dev-ui", "settings/enveloparBiblioteca", {}, function (g) {
             if (g === "1") {
                 toast("Tudo Pronto!", 2000, "toast-success")
@@ -16,7 +16,7 @@ $(function () {
         })
     });
     $("#envelopar-system").off("click").on("click", function () {
-        toast("Salvando Configurações...", 3000);
+        toast("Salvando Configurações...", 2000);
         post("dev-ui", "settings/enveloparSistema", {}, function (g) {
             if (g === "1") {
                 toast("Tudo Pronto!", 2000, "toast-success")

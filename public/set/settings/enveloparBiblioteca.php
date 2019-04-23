@@ -33,7 +33,7 @@ try {
             foreach (Helper::listFolder(PATH_HOME . "public/_config") as $item)
                 unlink(PATH_HOME . "public/_config/{$item}");
 
-            unlink(PATH_HOME . "public/_config");
+            rmdir(PATH_HOME . "public/_config");
         }
 
         $data['data'] = "1";
