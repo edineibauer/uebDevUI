@@ -24,13 +24,13 @@ $conf = json_decode(file_get_contents(PATH_HOME . "_config/config.json"), true);
 <div class="col padding-medium font-medium" id="config-form-dev"></div>
 
 <div class="col padding-12">
-    <div class="left container">
+    <!--<div class="left container">
         <label class="col card padding-medium padding-16">
             <input type="checkbox" class="left margin-left" id="autosync"
-                   value="<?= $conf['autosync'] ?>" <?= ($conf['autosync'] ? "checked='checked'" : "") ?>/>
+                   value="<?/*= $conf['autosync'] */?>" <?/*= ($conf['autosync'] ? "checked='checked'" : "") */?>/>
             <div class="font-medium left padding-8 padding-right pointer">Sincronização Automática</div>
         </label>
-    </div>
+    </div>-->
     <div class="left container">
         <label class="col card padding-medium padding-16">
             <input type="checkbox" class="left margin-left" id="homepage"
