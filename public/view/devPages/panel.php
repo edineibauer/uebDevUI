@@ -4,7 +4,7 @@ $dados['dominio'] = VENDOR . "dev-ui/";
 $dados['version'] = VERSION;
 $dados['dashboard'] = "";
 
-if(!empty($_SESSION['userlogin']['setor'])) {
+/*if(!empty($_SESSION['userlogin']['setor'])) {
     //Notificações
     $read = new \Conn\Read();
     $read->exeRead("dashboard_note", "WHERE autor = :a ORDER BY id LIMIT 16", "a={$_SESSION['userlogin']['id']}");
@@ -17,3 +17,6 @@ if(!empty($_SESSION['userlogin']['setor'])) {
 }
 
 $data['data'] = $tpl->getShow('UIDev', $dados);
+*/
+
+$data['data'] = "";
