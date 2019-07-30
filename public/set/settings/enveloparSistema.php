@@ -45,10 +45,10 @@ try {
         copy(PATH_HOME . "_config/route.json", PATH_HOME . "public/_config/route.json");
 
     if(file_exists(PATH_HOME . FAVICON))
-        copy(PATH_HOME . FAVICON, PATH_HOME . "public/_config/favicon.png");
+        copy(PATH_HOME . FAVICON, PATH_HOME . "public/_config/favicon." . pathinfo(FAVICON)['extension']);
 
     if(file_exists(PATH_HOME . LOGO))
-        copy(PATH_HOME . LOGO, PATH_HOME . "public/_config/logo.png");
+        copy(PATH_HOME . LOGO, PATH_HOME . "public/_config/logo." . pathinfo(LOGO)['extension']);
 
     if(file_exists(PATH_HOME . "entity/general/general_info.json"))
         copy(PATH_HOME . "entity/general/general_info.json", PATH_HOME . "public/_config/general_info.json");
