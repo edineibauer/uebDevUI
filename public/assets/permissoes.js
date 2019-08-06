@@ -29,7 +29,7 @@ $(function () {
 
         permit.entidades = [];
         for (let k in dicionarios) {
-            if(typeof dicionarios === "object" && ["login_attempt", "dashboard_note"].indexOf(k) === -1)
+            if(typeof dicionarios === "object" && ["login_attempt", "dashboard_push", "usuarios_token", "api_chave", "config"].indexOf(k) === -1)
                 permit.entidades.push(k);
         }
         permit.permissoes = preenchePermissoesNaoDefinidas(r[0]);
