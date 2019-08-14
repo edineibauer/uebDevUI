@@ -1,7 +1,7 @@
 <?php
 
 $tpl = new \Helpers\Template("dashboard");
-$data = ["response" => 1, "data" => "<div style='float: left; width: 100%; padding: 40px 0'>", "error" => ""];
+$data = ["response" => 1, "data" => "<div style='float: left; width: 100%; padding: 40px 5px'>", "error" => ""];
 $menus = [];
 
 if ($_SESSION['userlogin']['id'] === "1")
