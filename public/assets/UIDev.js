@@ -74,9 +74,9 @@ $(function () {
         })
     });
     setTimeout(function () {
-        view("devPages/panel", function (data) {
-            $("#dashboard").html(data.content);
-            spaceHeader()
+        post("dev-ui", "panel", {}, function (data) {
+            $("#dashboard").html(data);
+            spaceHeader();
         })
     }, 300)
 })
