@@ -28,6 +28,26 @@
     "file": "devPages/tema"
   },
   {
+    "icon": "settings_input_component",
+    "title": "Integrações",
+    "action": "page",
+    "lib": "dev-ui",
+    "file": "devPages/integracoes"
+  },
+  {
+    "icon": "router",
+    "title": "Rotas",
+    "action": "page",
+    "lib": "dev-ui",
+    "file": "devPages/rotas"
+  },
+  {
+    "icon": "compare_arrows",
+    "title": "APIs",
+    "action": "table",
+    "entity": "api_chave"
+  },
+  {
     "icon": "settings_ethernet",
     "title": "Desenvolvimento",
     "action": "page",
