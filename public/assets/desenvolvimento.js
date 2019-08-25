@@ -29,8 +29,7 @@ $(function () {
         if(navigator.onLine) {
             toast("Atualizando Sistema...", 100000);
             post("dev-ui", "cache/update", {}, function () {
-                toast("Recarregando Sistema...", 3000);
-                location.reload();
+                updateCache();
             });
         } else {
             toast("Sem Conexão", 2500, "toast-warning");
