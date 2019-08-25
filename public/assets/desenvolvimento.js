@@ -26,14 +26,14 @@ $(function () {
         })
     });
     $("#clear-cache").off("click").on("click", function () {
-        post('route', 'internet', {}, function (g) {
-            if(g === 1) {
-                toast("Atualizando Sistema...", 100000);
-                post("dev-ui", "cache/update", {}, function () {
-                    toast("Recarregando Arquivos...", 3000);
-                    location.reload(!0)
-                })
-            }
-        })
+        if(navigator.onLine) {
+            toast("Atualizando Sistema...", 100000);
+            post("dev-ui", "cache/update", {}, function () {
+                toast("Recarregando Sistema...", 3000);
+                location.reload();
+            });
+        } else {
+            toast("Sem Conexão", 2500, "toast-warning");
+        }
     });
 })
