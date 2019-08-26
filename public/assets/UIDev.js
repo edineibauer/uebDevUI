@@ -1,6 +1,6 @@
 function hide_sidebar_small() {
     if (screen.width < 993) {
-        $("#myOverlay, #devSidebar").css("display", "none")
+        $("#myOverlay, #mySidebar").css("display", "none")
     }
 }
 
