@@ -1,9 +1,9 @@
-<nav class="sidebar z-depth-2 collapse color-gray-light no-select animate-left dashboard-nav space-header"
-     id="mySidebar">
+<nav class="sidebar z-depth-2 collapse color-gray-light no-select animate-left dev-nav space-header"
+     id="devSidebar">
     <div class="container row padding-4" style="background-color: #e9e9e9">
-        <div id="dashboard-sidebar-imagem" class="col" style="height: 60px; width: 60px"></div>
+        <div id="dev-sidebar-imagem" class="col" style="height: 60px; width: 60px"></div>
         <div class="rest padding-left padding-bottom">
-            <strong class="col padding-top no-select" id="dashboard-sidebar-nome"></strong>
+            <strong class="col padding-top no-select" id="dev-sidebar-nome"></strong>
 
             <div class="col">
                 <span class="btn-edit-perfil left pointer menu-li padding-small color-gray-light opacity hover-opacity-off hover-shadow radius"
@@ -22,8 +22,8 @@
     </div>
 </nav>
 
-<div class="main dashboard-main">
-    <div id="dashboard" class="dashboard-tab container row"></div>
+<div class="main dev-main">
+    <div id="dev" class="container row"></div>
 </div>
 
 <?php

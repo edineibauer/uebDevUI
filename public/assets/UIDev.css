@@ -2,7 +2,7 @@ html {
     background: #dfdfdf;
 }
 
-.dashboard-nav {
+.dev-nav {
     z-index: 21;
     top: inherit;
     padding-bottom:45px;
@@ -20,11 +20,11 @@ html {
     overflow: hidden;
 }
 
-.dashboard-main {
+.dev-main {
     margin-left: 200px
 }
 
-.dashboard-nav::-webkit-scrollbar {
+.dev-nav::-webkit-scrollbar {
     width: 5px;
 }
 
