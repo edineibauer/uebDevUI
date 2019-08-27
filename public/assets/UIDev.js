@@ -82,7 +82,6 @@ $(function () {
     setTimeout(function () {
         post("dev-ui", "panel", {}, function (data) {
             $("#dev").html(data);
-            spaceHeader();
         })
     }, 300)
 })
