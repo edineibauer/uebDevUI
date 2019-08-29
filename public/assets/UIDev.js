@@ -73,7 +73,7 @@ $(function () {
         }
     });
 
-    $("#core-content, #core-applications").off("click", ".close-dashboard-note").on("click", ".close-dashboard-note", function () {
+    $("#app, #core-applications").off("click", ".close-dashboard-note").on("click", ".close-dashboard-note", function () {
         let $this = $(this);
         post('dev-ui', 'dash/delete', {id: $this.attr("id")}, function (data) {
             $this.closest("article").parent().remove()
