@@ -22,7 +22,7 @@
     </div>
 </nav>
 
-<div class="main dev-main">
+<div class="main dev-main animate-right">
     <div id="dev" class="container row"></div>
 </div>
 
