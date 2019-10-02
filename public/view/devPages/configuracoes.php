@@ -39,6 +39,13 @@ $conf = json_decode(file_get_contents(PATH_HOME . "_config/config.json"), true);
         </label>
     </div>
     <div class="left container">
+        <label class="col card padding-medium padding-16">
+            <input type="checkbox" class="left margin-left" id="serviceworker"
+                   value="<?= $conf['serviceworker'] ?>" <?= ($conf['serviceworker'] ? "checked='checked'" : "") ?>/>
+            <div class="font-medium left padding-8 padding-right pointer">ServiceWorker</div>
+        </label>
+    </div>
+    <div class="left container">
         <label class="col card padding-medium" style="padding-bottom: 0!important;width: 160px;">
             <span class="col align-left">Limite de Registros Offline</span>
             <input type="number" step="50" class="left" id="limitoffline" value="<?= $conf['limitoffline'] ?>"/>
@@ -52,10 +59,10 @@ $conf = json_decode(file_get_contents(PATH_HOME . "_config/config.json"), true);
     $("#config-form-dev").form("config", 1, ["nome_do_site", "subtitulo", "descricao"]);
 
     function postOptions() {
-        post("config", "updateOptions", {'autosync': $("#autosync").is(":checked"), 'homepage': $("#homepage").is(":checked"), 'limitoffline': $("#limitoffline").val()});
+        post("config", "updateOptions", {'autosync': $("#autosync").is(":checked"), 'serviceworker': $("#serviceworker").is(":checked"), 'homepage': $("#homepage").is(":checked"), 'limitoffline': $("#limitoffline").val()});
     }
 
-    $("#autosync, #homepage, #limitoffline").off("change keyup").on("change keyup", function() {
+    $("#autosync, #homepage, #limitoffline, #serviceworker").off("change keyup").on("change keyup", function() {
         postOptions();
     });
 </script>
