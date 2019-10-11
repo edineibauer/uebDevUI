@@ -44,10 +44,10 @@ try {
     if(file_exists(PATH_HOME . "_config/route.json"))
         copy(PATH_HOME . "_config/route.json", PATH_HOME . "public/_config/route.json");
 
-    if(file_exists(PATH_HOME . FAVICON))
+    if(!empty(FAVICON) && file_exists(PATH_HOME . FAVICON))
         copy(PATH_HOME . FAVICON, PATH_HOME . "public/_config/favicon." . pathinfo(FAVICON, PATHINFO_EXTENSION));
 
-    if(file_exists(PATH_HOME . LOGO))
+    if(!empty(LOGO) && file_exists(PATH_HOME . LOGO))
         copy(PATH_HOME . LOGO, PATH_HOME . "public/_config/logo." . pathinfo(LOGO, PATHINFO_EXTENSION));
 
     if(file_exists(PATH_HOME . "entity/general/general_info.json"))
