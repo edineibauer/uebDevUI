@@ -52,17 +52,17 @@ $(function () {
         $("#core-header").css({"position": "fixed", "top": 0});
 
         if (action === "table") {
-            $("#dev").html("").grid($(this).attr("data-entity"))
+            $("#dashboard").html("").grid($(this).attr("data-entity"))
         } else if (action === 'form') {
             let id = !isNaN($(this).attr("data-atributo")) && $(this).attr("data-atributo") > 0 ? parseInt($(this).attr("data-atributo")) : null;
-            $("#dev").html("").form($(this).attr("data-entity"), id, typeof $(this).attr("data-fields") !== "undefined" ? JSON.parse($(this).attr("data-fields")) : "undefined")
+            $("#dashboard").html("").form($(this).attr("data-entity"), id, typeof $(this).attr("data-fields") !== "undefined" ? JSON.parse($(this).attr("data-fields")) : "undefined")
         } else if (action === 'page') {
             view($(this).attr("data-atributo"), function (data) {
                 if (typeof (data.content) === "string") {
                     if (data.content === "no-network") {
-                        $("#dev").html("Ops! Conexão Perdida");
+                        $("#dashboard").html("Ops! Conexão Perdida");
                     } else {
-                        $("#dev").html(data.content);
+                        $("#dashboard").html(data.content);
                         if (data.js.length)
                             $.cachedScript(data.js);
                         if (data.css.length)
@@ -81,7 +81,7 @@ $(function () {
     });
     setTimeout(function () {
         post("dev-ui", "panel", {}, function (data) {
-            $("#dev").html(data);
+            $("#dashboard").html(data);
         })
     }, 300)
 })

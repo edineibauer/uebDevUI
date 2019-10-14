@@ -22,8 +22,8 @@
     </div>
 </nav>
 
-<div class="main dev-main animate-right">
-    <div id="dev" class="container row"></div>
+<div class="main dashboard-main animate-right">
+    <div id="dashboard" class="container row"></div>
 </div>
 
 <?php
