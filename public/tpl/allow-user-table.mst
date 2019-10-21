@@ -1,5 +1,5 @@
 {{#users}}
-    <div class="col padding-right" style="width: 240px">
+    <div class="col padding-right" style="width: 241px">
         <div class="col card">
             <header class="col color-gray-light" style="height: 106px;">
                 <h1 class="col padding-left font-large">{{ user }}</h1>
