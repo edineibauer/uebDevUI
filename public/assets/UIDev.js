@@ -11,10 +11,10 @@ function mainLoading() {
 }
 
 function devSidebarInfo() {
-    if (getCookie("imagem") === "") {
-        document.querySelector("#dev-sidebar-imagem").innerHTML = "<i class='material-icons font-jumbo'>people</i>";
+    if (localStorage.imagem === "" || localStorage.imagem === "null") {
+        document.querySelector("#dev-sidebar-imagem").innerHTML = "<i class='material-icons font-jumbo'>people</i>"
     } else {
-        document.querySelector("#dev-sidebar-imagem").innerHTML = "<img src='" + decodeURIComponent(getCookie("imagem")) + "&h=80&w=80' height='60' width='60'>";
+        document.querySelector("#dev-sidebar-imagem").innerHTML = "<img src='" + decodeURIComponent(JSON.parse(localStorage.imagem)[0]['urls'][100]) + "' height='60' width='60'>"
     }
     document.querySelector("#dev-sidebar-nome").innerHTML = getCookie("nome");
 
