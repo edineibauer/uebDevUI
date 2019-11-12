@@ -13,19 +13,19 @@
         <div class="left padding-small padding-16">
             <button id="clear-cache" class="btn hover-shadow margin-0 opacity hover-opacity-off">
                 <i class="material-icons left padding-right" title="Atualiza a versão do sistema, recarregando arquivos bases como: assets, cores e caches.">info</i>
-                <span class="left padding-tiny">Atualizar Versão</span>
+                <span class="left padding-tiny">Atualizar Sistema</span>
             </button>
         </div>
         <div class="left padding-small padding-16">
             <button id="envelopar-lib" class="btn hover-shadow margin-0 opacity hover-opacity-off">
                 <i class="material-icons left padding-right" title="Carrega as entidades para o controlador de versão.">info</i>
-                <span class="left padding-tiny">Sistema como Biblioteca</span>
+                <span class="left padding-tiny">Criar Biblioteca do Sistema</span>
             </button>
         </div>
         <div class="left padding-small padding-16">
             <button id="envelopar-system" class="btn hover-shadow margin-0 opacity hover-opacity-off">
                 <i class="material-icons left padding-right" title="Carrega as configurações para o controlador de versão.">info</i>
-                <span class="left padding-tiny">Sistema como Template</span>
+                <span class="left padding-tiny">Criar Template do Sistema</span>
             </button>
         </div>
     </div>
