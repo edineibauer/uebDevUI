@@ -24,7 +24,7 @@ $(function () {
         permit.users.push({id: "0", user: "Anônimo"})
         $.each(r[1], function(entity, meta) {
             if(typeof meta.user === "number" && meta.user)
-                permit.users.push({id: entity, user: ucFirst(entity.replaceAll('_', ' '))})
+                permit.users.push({id: entity, user: ucFirst(replaceAll(entity, '_', ' '))})
         });
 
         permit.entidades = [];
@@ -39,7 +39,7 @@ $(function () {
                 entidades: permit.entidades,
                 familyName: function () {
                     return function (text, render) {
-                        return render(text).replaceAll('_', ' ')
+                        return replaceAll(render(text), '_', ' ')
                     }
                 }
             }));
