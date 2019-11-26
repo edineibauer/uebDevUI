@@ -41,7 +41,7 @@ function createTheme() {
     sat = x.s;
     light = x.l;
 
-    x.l= light + ((1.0-light)/5) * 2.5;
+    x.l= light + ((1.0-light)/5) * 1.8;
     hex = w3color("hsl(" + x.h + "," + sat + "," + x.l + ")").toHexString();
     z = document.getElementById("t1l5");
     z.style.backgroundColor = hex;
@@ -52,7 +52,7 @@ function createTheme() {
     z.style.color = col;
     theme1.tl5 = col;
 
-    x.l= light + ((1.0-light)/5) * 2;
+    x.l= light + ((1.0-light)/5) * 1.4;
     hex = w3color("hsl(" + x.h + "," + sat + "," + x.l + ")").toHexString();
     z = document.getElementById("t1l4");
     z.style.backgroundColor = hex;
@@ -63,7 +63,7 @@ function createTheme() {
     z.style.color = col;
     theme1.tl4 = col;
 
-    x.l= light + ((1.0-light)/5) * 1.3;
+    x.l= light + ((1.0-light)/5);
     hex = w3color("hsl(" + x.h + "," + sat + "," + x.l + ")").toHexString();
     z = document.getElementById("t1l3");
     z.style.backgroundColor = hex;
@@ -74,7 +74,7 @@ function createTheme() {
     z.style.color = col;
     theme1.tl3 = col;
 
-    x.l= light + ((1.0-light)/5) * 0.8;
+    x.l= light + ((1.0-light)/5) * 0.6;
     hex = w3color("hsl(" + x.h + "," + sat + "," + x.l + ")").toHexString();
     z = document.getElementById("t1l2");
     z.style.backgroundColor = hex;
@@ -118,7 +118,7 @@ function createTheme() {
     z.style.color = col;
     theme1.td1 = col;
 
-    x.l= light - ((light)/5) * 0.7;
+    x.l= light - ((light)/5) * 0.6;
     hex = w3color("hsl(" + x.h + "," + x.s + "," + x.l + ")").toHexString();
     z = document.getElementById("t1d2");
     z.style.backgroundColor = hex;
@@ -129,7 +129,7 @@ function createTheme() {
     z.style.color = col;
     theme1.td2 = col;
 
-    x.l= light - ((light)/5) * 1.3;
+    x.l= light - ((light)/5);
     hex = w3color("hsl(" + x.h + "," + x.s + "," + x.l + ")").toHexString();
     z = document.getElementById("t1d3");
     z.style.backgroundColor = hex;
@@ -140,7 +140,7 @@ function createTheme() {
     z.style.color = col;
     theme1.td3 = col;
 
-    x.l= light - ((light)/5) * 2;
+    x.l= light - ((light)/5) * 1.4;
     hex = w3color("hsl(" + x.h + "," + x.s + "," + x.l + ")").toHexString();
     z = document.getElementById("t1d4");
     z.style.backgroundColor = hex;
@@ -151,7 +151,7 @@ function createTheme() {
     z.style.color = col;
     theme1.td4 = col;
 
-    x.l= light - ((light)/5) * 2.5;
+    x.l= light - ((light)/5) * 2;
     hex = w3color("hsl(" + x.h + "," + x.s + "," + x.l + ")").toHexString();
     z = document.getElementById("t1d5");
     z.style.backgroundColor = hex;
@@ -198,7 +198,7 @@ function createTheme() {
         /* TEMA ADICONAL PARA TROCA DE ELEMENTOS PADRÕES */
         /*===================================================*/
 
-        txt += ".switch input:checked + .slider {background-color:" + theme1.l1 + "!important}<br>";
+        txt += ".switch input:checked + .slider {background-color:" + theme1.l2 + "!important}<br>";
         txt += ".switch input:checked + .slider:after {background-color:" + theme1.d0 + "!important}<br>";
 
         /* INPUT BAR STYLE */
