@@ -198,18 +198,18 @@ function createTheme() {
         /* TEMA ADICONAL PARA TROCA DE ELEMENTOS PADRÕES */
         /*===================================================*/
 
-        txt += ".switch input:checked + .slider {background-color:" + theme1.l2 + "!important}<br>";
-        txt += ".switch input:checked + .slider:after {background-color:" + theme1.d0 + "!important}<br>";
+        txt += ".form-crud .switch input:checked + .slider {background-color:" + theme1.l2 + "!important}<br>";
+        txt += ".form-crud .switch input:checked + .slider:after {background-color:" + theme1.d0 + "!important}<br>";
 
         /* INPUT BAR STYLE */
-        txt += "input:focus, textarea:focus, select:focus, select {border-bottom-color:" + theme1.d0 + " !important}<br><br>";
-        txt += ".input-bar:before, .input-bar:after, button {background-color:" + theme1.d0 + "!important}<br><br>";
+        txt += ".form-crud input:focus, .form-crud textarea:focus, .form-crud select:focus, .form-crud select {border-bottom-color:" + theme1.d0 + " !important}<br><br>";
+        txt += ".form-crud .input-bar:before, .form-crud .input-bar:after, .form-crud button {background-color:" + theme1.d0 + "!important}<br><br>";
 
         /* PAGINAÇÃO */
-        txt += ".bar .button.active {background-color:" + theme1.d0 + "!important}<br><br>";
+        txt += ".bar.pagination .button.active {background-color:" + theme1.d0 + "!important}<br><br>";
 
         /* TEXTAREA STYLE */
-        txt += ".jqte_focused {border-bottom-color:" + theme1.d0 + " !important; border-left-color:" + theme1.d0 + " !important;}<br>";
+        txt += ".form-crud .jqte_focused {border-bottom-color:" + theme1.d0 + " !important; border-left-color:" + theme1.d0 + " !important;}<br>";
 
         /* LOADING LINE STYLE */
         txt += "@keyframes loading {0% {left: 0;width: 0;background: " + theme1.d1 + ";}20% {width: 120px}100% {left: 100%;width: 0;background: " + theme1.d3 + "}}";
