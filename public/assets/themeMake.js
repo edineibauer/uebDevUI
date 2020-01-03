@@ -162,16 +162,23 @@ function createTheme() {
     z.style.color = col;
     theme1.td5 = col;
 
+    function addHexColor(c1, c2) {
+        var hexStr = (parseInt(c1, 16) + parseInt(c2, 16)).toString(16);
+        while (hexStr.length < 6) { hexStr = '0' + hexStr; } // Zero pad.
+        return hexStr;
+    }
+
+    let theme1Light = "#" + addHexColor(theme1.d0, "110110");
+    let theme1TLight = "#" + addHexColor(theme1.td0, "110110");
+
     txt = ".theme-d1 {color:" + theme1.td1 + " !important; background-color:" + theme1.d1 +" !important}<br>";
     txt += ".theme-d2 {color:" + theme1.td2 + " !important; background-color:" + theme1.d2 +" !important}<br>";
     txt += ".theme-d3 {color:" + theme1.td3 + " !important; background-color:" + theme1.d3 +" !important}<br>";
     txt += ".theme-d4 {color:" + theme1.td4 + " !important; background-color:" + theme1.d4 +" !important}<br>";
     txt += ".theme-d5 {color:" + theme1.td5 + " !important; background-color:" + theme1.d5 +" !important}<br><br>";
 
-    txt += ".theme-dark {color:" + theme1.td5 + " !important; background-color:" + theme1.d5 +" !important}<br>";
-
-    txt += ".theme {color:" + theme1.td0 + " !important; background-color:" + theme1.d0 +" !important}<br>";
-    txt += ".theme-aux {background-color:" + theme1.td0 + " !important}<br>";
+    txt += ".theme {color:" + theme1.td0 + " !important; background-color:" + theme1.d0 +" !important; background-image: linear-gradient(" + theme1.d0 +", " + theme1Light + ")!important;}<br>";
+    txt += ".theme-aux {background-color:" + theme1.td0 + " !important; background-image: linear-gradient(" + theme1.td0 +", " + theme1TLight + ")!important;}<br>";
     txt += ".theme-text-aux {color:" + theme1.td0 + " !important}<br>";
     txt += ".theme-text-d {color:" + theme1.d2 + " !important}<br>";
     txt += ".theme-border-d {border-color:" + theme1.d2 + " !important}<br><br>";
@@ -185,7 +192,6 @@ function createTheme() {
         txt += ".theme-l2 {color:" + theme1.tl2 + " !important; background-color:" + theme1.l2 +" !important}<br>";
         txt += ".theme-l1 {color:" + theme1.tl1 + " !important; background-color:" + theme1.l1 +" !important}<br>";
 
-        txt += ".theme-light {color:" + theme1.tl5 + " !important; background-color:" + theme1.l5 +" !important}<br>";
         txt += ".theme-text, input:focus ~ label {color:" + theme1.d0 + " !important}<br>";
         txt += ".theme-text-l {color:" + theme1.l2 + " !important}<br>";
         txt += ".theme-border {border-color:" + theme1.d0 + " !important}<br><br>";
@@ -203,10 +209,10 @@ function createTheme() {
 
         /* INPUT BAR STYLE */
         txt += ".form-crud input:focus, .form-crud textarea:focus, .form-crud select:focus, .form-crud select {border-bottom-color:" + theme1.d0 + " !important}<br><br>";
-        txt += ".form-crud .input-bar:before, .form-crud .input-bar:after, .form-crud button {background-color:" + theme1.d0 + "!important}<br><br>";
+        txt += ".form-crud .input-bar:before, .form-crud .input-bar:after, .form-crud button {background-color:" + theme1.d0 + "!important; background-image: linear-gradient(" + theme1.d0 +", " + theme1Light + ")!important;}<br><br>";
 
         /* PAGINAÇÃO */
-        txt += ".bar.pagination .button.active {background-color:" + theme1.d0 + "!important}<br><br>";
+        txt += ".bar.pagination .button.active {background-color:" + theme1.d0 + "!important; background-image: linear-gradient(" + theme1.d0 +", " + theme1Light + ")!important;}<br><br>";
 
         /* TEXTAREA STYLE */
         txt += ".form-crud .jqte_focused {border-bottom-color:" + theme1.d0 + " !important; border-left-color:" + theme1.d0 + " !important;}<br>";
