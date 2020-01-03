@@ -25,6 +25,13 @@ function createSuggestion(id) {
         createTheme();
     }
 }
+
+function addHexColor(c1, c2) {
+    var hexStr = (parseInt(c1, 16) + parseInt(c2, 16)).toString(16);
+    while (hexStr.length < 6) { hexStr = '0' + hexStr; } // Zero pad.
+    return hexStr;
+}
+
 function createTheme() {
     var theme1 = new Object;
     var i,c,h,s,l,b,v;
@@ -161,12 +168,6 @@ function createTheme() {
     if (w3color(hex).isDark(165)) {col = "#fff"}
     z.style.color = col;
     theme1.td5 = col;
-
-    function addHexColor(c1, c2) {
-        var hexStr = (parseInt(c1, 16) + parseInt(c2, 16)).toString(16);
-        while (hexStr.length < 6) { hexStr = '0' + hexStr; } // Zero pad.
-        return hexStr;
-    }
 
     let theme1Light = "#" + addHexColor(theme1.d0, "110110");
     let theme1TLight = "#" + addHexColor(theme1.td0, "110110");
