@@ -16,7 +16,7 @@ function devSidebarInfo() {
     } else {
         document.querySelector("#dev-sidebar-imagem").innerHTML = "<img src='" + decodeURIComponent(JSON.parse(USER.imagem)['urls'][100]) + "' height='60' width='60'>"
     }
-    document.querySelector("#dev-sidebar-nome").innerHTML = getCookie("nome");
+    document.querySelector("#dev-sidebar-nome").innerHTML = USER.nome;
 
     $("#core-sidebar-edit")
         .removeClass("hide")
