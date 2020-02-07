@@ -8,20 +8,21 @@ $(function () {
         permit.permissoes[user][entity][tipo] = $(this).prop("checked");
         let dados = Object.assign({}, permit.permissoes);
         post('dev-ui', 'save/permissoes', {dados: dados}, function () {
-            get("allow").then(allow => {
-                dbLocal.clear('__allow').then(() => {
-                    dbLocal.exeCreate("__allow", allow)
-                })
+            let all = [];
+            all.push(get("allow"));
+            all.push(dbLocal.clear('__allow'));
+            Promise.all(all).then(r => {
+                dbLocal.exeCreate("__allow", r[0]);
             });
             setUpdateVersion()
         })
     });
 
-    let pp = dbLocal.exeRead('__allow', 1);
+    let pp = get('devPermissoes');
     let pt = dbLocal.exeRead('__info', 1);
     Promise.all([pp, pt]).then(r => {
 
-        permit.users.push({id: "0", user: "Anônimo"})
+        permit.users.push({id: "0", user: "Anônimo"});
         $.each(r[1], function(entity, meta) {
             if(typeof meta.user === "number" && meta.user)
                 permit.users.push({id: entity, user: ucFirst(replaceAll(entity, '_', ' '))})
