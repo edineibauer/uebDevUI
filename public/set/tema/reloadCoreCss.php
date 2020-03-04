@@ -51,11 +51,9 @@ if(is_array($f['js']) && !empty($f['js'])) {
     }
 }
 
-
 //busca do repositório
 $list = implode('/', array_unique(array_merge($f['js'], $f['css'])));
 $data = json_decode(file_get_contents(REPOSITORIO . "app/library/{$list}"), true);
-
 
 if ($data['response'] === 1 && !empty($data['data'])) {
     foreach ($f['css'] as $item) {
