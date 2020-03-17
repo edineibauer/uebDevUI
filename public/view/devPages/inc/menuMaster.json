@@ -35,13 +35,6 @@
     "file": "devPages/integracoes"
   },
   {
-    "icon": "router",
-    "title": "Rotas",
-    "action": "page",
-    "lib": "dev-ui",
-    "file": "devPages/rotas"
-  },
-  {
     "icon": "compare_arrows",
     "title": "APIs",
     "action": "table",
