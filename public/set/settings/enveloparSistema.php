@@ -32,6 +32,8 @@ try {
         }
     }
 
+    Helper::recurseCopy(PATH_HOME . "_config/offline", PATH_HOME . "public/_config/offline");
+
     if(file_exists(PATH_HOME . "_config/config.json"))
         copy(PATH_HOME . "_config/config.json", PATH_HOME . "public/_config/config.json");
 
