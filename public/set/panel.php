@@ -5,9 +5,9 @@ $data = ["response" => 1, "data" => "<div style='float: left; width: 100%; paddi
 $menus = [];
 
 if ($_SESSION['userlogin']['id'] === "1")
-    $menus = json_decode(file_get_contents(PATH_HOME . VENDOR . "dev-ui/public/view/devPages/inc/menuMaster.json"), !0);
+    $menus = json_decode(file_get_contents(PATH_HOME . VENDOR . "dev-ui/public/view/inc/menuMaster.json"), !0);
 elseif ($_COOKIE['setor'] === "admin")
-    $menus = json_decode(file_get_contents(PATH_HOME . VENDOR . "dev-ui/public/view/devPages/inc/menu.json"), !0);
+    $menus = json_decode(file_get_contents(PATH_HOME . VENDOR . "dev-ui/public/view/inc/menu.json"), !0);
 
 foreach ($menus as $menu)
     $data['data'] .= $tpl->getShow("menu-card", $menu);
