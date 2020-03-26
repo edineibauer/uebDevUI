@@ -17,7 +17,7 @@
     <hr style="margin:0 0 10px 0;border-top: solid 1px #ddd;">
     <div class="bar-block">
         <?php
-        require_once 'devPages/inc/menu.php';
+        require_once 'inc/menu.php';
         ?>
     </div>
 </nav>

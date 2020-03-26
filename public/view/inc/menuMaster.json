@@ -4,35 +4,35 @@
     "title": "Permissões",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/permissoes"
+    "file": "UIDevPermissoes"
   },
   {
     "icon": "account_box",
     "title": "Autores",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/autores"
+    "file": "UIDevAutores"
   },
   {
     "icon": "settings",
     "title": "Configurações",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/configuracoes"
+    "file": "UIDevConfiguracoes"
   },
   {
     "icon": "format_paint",
     "title": "Tema",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/tema"
+    "file": "UIDevTema"
   },
   {
     "icon": "settings_input_component",
     "title": "Integrações",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/integracoes"
+    "file": "UIDevIntegracoes"
   },
   {
     "icon": "compare_arrows",
@@ -45,6 +45,6 @@
     "title": "Desenvolvimento",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/desenvolvimento"
+    "file": "UIDevDesenvolvimento"
   }
 ]

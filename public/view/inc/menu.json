@@ -4,34 +4,34 @@
     "title": "Permissões",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/permissoes"
+    "file": "UIDevPermissoes"
   },
   {
     "icon": "account_box",
     "title": "Autores",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/autores"
+    "file": "UIDevAutores"
   },
   {
     "icon": "settings",
     "title": "Configurações",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/configuracoes"
+    "file": "UIDevConfiguracoes"
   },
   {
     "icon": "format_paint",
     "title": "Tema",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/tema"
+    "file": "UIDevTema"
   },
   {
     "icon": "settings_ethernet",
     "title": "Desenvolvimento",
     "action": "page",
     "lib": "dev-ui",
-    "file": "devPages/desenvolvimento"
+    "file": "UIDevDesenvolvimento"
   }
 ]
