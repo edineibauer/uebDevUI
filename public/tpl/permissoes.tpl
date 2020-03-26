@@ -16,5 +16,3 @@
         </div>
     </div>
 </section>
-
-<script src="{$home}{$vendor}dev-ui/public/assets/permissoes.js?v={$version}"></script>
