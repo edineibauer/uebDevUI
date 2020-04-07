@@ -76,4 +76,4 @@
     </div>
 </div>
 
-<script src="{$home}{$vendor}dev-ui/public/assets/integracoes.js?v={$version}"></script>
+<script src="{$home}{$vendor}dev-ui/public/assets/UIDevIntegracoes.js?v={$version}"></script>

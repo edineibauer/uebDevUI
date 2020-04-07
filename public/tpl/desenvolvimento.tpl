@@ -31,4 +31,4 @@
     </div>
 </section>
 
-<script src="{$home}{$vendor}dev-ui/public/assets/desenvolvimento.js?v={$version}"></script>
+<script src="{$home}{$vendor}dev-ui/public/assets/UIDevDesenvolvimento.js?v={$version}"></script>
