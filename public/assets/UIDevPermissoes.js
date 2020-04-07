@@ -35,7 +35,7 @@ $(function () {
         }
         permit.permissoes = preenchePermissoesNaoDefinidas(r[0]);
 
-        dbLocal.exeRead("__template", 1).then(tpl => {
+        getTemplates().then(tpl => {
             $("#list-entity").html(Mustache.render(tpl['allow-list-entity'], {
                 entidades: permit.entidades,
                 familyName: function () {

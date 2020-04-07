@@ -1,7 +1,7 @@
 $(function () {
     let dicionarios = dbLocal.exeRead("__dicionario", 1);
     let info = dbLocal.exeRead("__info", 1);
-    let tpl = dbLocal.exeRead("__template", 1);
+    let tpl = getTemplates();
     Promise.all([dicionarios, info, tpl]).then(r => {
         dicionarios = r[0];
         info = r[1];
