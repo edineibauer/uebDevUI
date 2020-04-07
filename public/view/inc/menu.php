@@ -1,6 +1,6 @@
 <?php
 
-$tpl = new \Helpers\Template("dashboard");
+$tpl = new \Helpers\Template("dev-ui");
 
 $menus = [];
 if ($_SESSION['userlogin']['id'] === "1")

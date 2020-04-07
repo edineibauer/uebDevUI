@@ -1,6 +1,6 @@
 <?php
 
-$tpl = new \Helpers\Template("dashboard");
+$tpl = new \Helpers\Template("dev-ui");
 $data = ["response" => 1, "data" => "<div style='float: left; width: 100%; padding: 40px 5px'>", "error" => ""];
 $menus = [];
 
