@@ -45,4 +45,4 @@
     </div>
 </section>
 
-<script src="<?= HOME ?>assetsPublic/view/permissoes.min.js?v=<?=VERSION?>"></script>
+<script src="<?= HOME ?>assetsPublic/view/UIDevPermissoes.min.js?v=<?=VERSION?>"></script>
