@@ -205,7 +205,7 @@ function createTheme() {
         /* TEMA ADICONAL PARA TROCA DE ELEMENTOS PADRÕES */
         /*===================================================*/
 
-        txt += ".form-crud .switch input:checked + .slider {background-color:" + theme1.l2 + "!important}<br>";
+        txt += ".form-crud .switch input:checked + .slider {background-color:" + theme1.l4 + "!important}<br>";
         txt += ".form-crud .switch input:checked + .slider:after {background-color:" + theme1.d0 + "!important}<br>";
 
         /* INPUT BAR STYLE */
