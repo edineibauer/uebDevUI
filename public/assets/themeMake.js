@@ -291,7 +291,7 @@ function restoreTheme() {
             } else {
                 toast("Tema Alterado", 1000, "toast-success");
                 setUpdateVersion();
-                clearCache().then(() => {
+                clearCacheUser().then(() => {
                     window.location.reload()
                 });
             }
@@ -307,7 +307,7 @@ function saveTheme() {
             post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
                 toast("Tema Alterado", 1000, "toast-success");
                 setUpdateVersion();
-                clearCache().then(() => {
+                clearCacheUser().then(() => {
                     window.location.reload()
                 });
             });
