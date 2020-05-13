@@ -305,10 +305,8 @@ function saveTheme() {
             applyTheme = 1;
             toast("Aplicando...", 6000, "toast-success");
             post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
-                toast("Tema Alterado", 1000, "toast-success");
-                setUpdateVersion();
-                clearCacheUser().then(() => {
-                    window.location.reload()
+                setUpdateVersion().then(() => {
+                    checkUpdate();
                 });
             });
         }
