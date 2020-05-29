@@ -32,8 +32,6 @@ try {
         }
     }
 
-    Helper::recurseCopy(PATH_HOME . "_config/offline", PATH_HOME . "public/_config/offline");
-
     if(file_exists(PATH_HOME . "_config/config.json"))
         copy(PATH_HOME . "_config/config.json", PATH_HOME . "public/_config/config.json");
 
@@ -42,9 +40,6 @@ try {
 
     if(file_exists(PATH_HOME . "_config/permissoes.json"))
         copy(PATH_HOME . "_config/permissoes.json", PATH_HOME . "public/_config/permissoes.json");
-
-    if(file_exists(PATH_HOME . "_config/route.json"))
-        copy(PATH_HOME . "_config/route.json", PATH_HOME . "public/_config/route.json");
 
     if(!empty(FAVICON) && file_exists(PATH_HOME . FAVICON))
         copy(PATH_HOME . FAVICON, PATH_HOME . "public/_config/favicon." . pathinfo(FAVICON, PATHINFO_EXTENSION));
