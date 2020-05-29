@@ -6,6 +6,18 @@ $(function () {
         let entity = $(this).attr("data-entity");
         let tipo = $(this).attr("data-tipo");
         permit.permissoes[user][entity][tipo] = $(this).prop("checked");
+
+        if(tipo === "menu") {
+            permit.permissoes[user][entity]["read"] = permit.permissoes[user][entity]["menu"];
+            permit.permissoes[user][entity]["create"] = permit.permissoes[user][entity]["menu"];
+            permit.permissoes[user][entity]["update"] = permit.permissoes[user][entity]["menu"];
+            permit.permissoes[user][entity]["delete"] = permit.permissoes[user][entity]["menu"];
+            $(".allow-menu-session[data-tipo='read'][data-entity='" + entity + "'][data-user='" + user + "']").prop("checked", permit.permissoes[user][entity]["menu"]);
+            $(".allow-menu-session[data-tipo='create'][data-entity='" + entity + "'][data-user='" + user + "']").prop("checked", permit.permissoes[user][entity]["menu"]);
+            $(".allow-menu-session[data-tipo='update'][data-entity='" + entity + "'][data-user='" + user + "']").prop("checked", permit.permissoes[user][entity]["menu"]);
+            $(".allow-menu-session[data-tipo='delete'][data-entity='" + entity + "'][data-user='" + user + "']").prop("checked", permit.permissoes[user][entity]["menu"]);
+        }
+
         let dados = Object.assign({}, permit.permissoes);
         post('dev-ui', 'save/permissoes', {dados: dados}, function () {
             let all = [];
@@ -24,7 +36,7 @@ $(function () {
 
         permit.users.push({id: "0", user: "Anônimo"});
         $.each(r[1], function(entity, meta) {
-            if(typeof meta.user === "number" && meta.user)
+            if(typeof meta.user === "number" && meta.user === 1)
                 permit.users.push({id: entity, user: ucFirst(replaceAll(entity, '_', ' '))})
         });
 
