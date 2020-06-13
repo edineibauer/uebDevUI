@@ -226,6 +226,3 @@
         </section>
     </div>
 </div>
-
-<script src="{$home}{$vendor}dev-ui/public/assets/colorMaker.js?v={$version}"></script>
-<script src="{$home}{$vendor}dev-ui/public/assets/themeMake.js?v={$version}"></script>

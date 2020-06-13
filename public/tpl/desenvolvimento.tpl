@@ -30,5 +30,3 @@
         </div>
     </div>
 </section>
-
-<script src="{$home}{$vendor}dev-ui/public/assets/UIDevDesenvolvimento.js?v={$version}"></script>

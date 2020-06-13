@@ -75,5 +75,3 @@
         {/foreach}
     </div>
 </div>
-
-<script src="{$home}{$vendor}dev-ui/public/assets/UIDevIntegracoes.js?v={$version}"></script>
