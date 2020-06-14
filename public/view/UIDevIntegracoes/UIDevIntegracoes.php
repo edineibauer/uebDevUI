@@ -33,4 +33,4 @@ foreach (\Helpers\Helper::listFolder(PATH_HOME . VENDOR) as $item) {
     }
 }
 
-$data['data'] = $tpl->getShow('integracoes', $integ);
+echo $tpl->getShow('integracoes', $integ);

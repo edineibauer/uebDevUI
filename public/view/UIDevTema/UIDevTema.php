@@ -5,4 +5,4 @@ foreach (\Helpers\Helper::listFolder(PATH_HOME . VENDOR . "dev-ui/public/themes"
 }
 
 $tpl = new \Helpers\Template("dev-ui");
-$data['data'] = $tpl->getShow('tema', $dados);
+echo $tpl->getShow('tema', $dados);

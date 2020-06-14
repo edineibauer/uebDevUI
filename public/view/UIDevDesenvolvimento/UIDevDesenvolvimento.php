@@ -1,17 +1,32 @@
-<?php
+<header class="container">
+    <h5>
+        <b><i class="material-icons left padding-right">settings_ethernet</i> <span class="left">Desenvolvimento</span></b>
+    </h5>
+</header>
 
-$tpl = new \Helpers\Template("dev-ui");
-$read = new \Conn\Read();
+<section class="col padding-32 border-bottom">
+    <header class="container col">
+        <h2>Desenvolvimento</h2>
+    </header>
 
-$dados['version'] = VERSION;
-
-//Reautorar Conteúdo
-$dados['reautor'] = "";
-$read->exeRead("usuarios", "ORDER BY setor,nivel,nome DESC LIMIT 50");
-if ($read->getResult()) {
-    foreach ($read->getResult() as $log)
-        $dados['reautor'] .= "<option value='{$log['id']}'>{$log['nome']}</option>";
-}
-
-$tpl = new \Helpers\Template("dev-ui");
-$data['data'] = $tpl->getShow("desenvolvimento", $dados);
+    <div class="container">
+        <div class="left padding-small padding-16">
+            <button id="clear-cache" class="btn hover-shadow margin-0 opacity hover-opacity-off">
+                <i class="material-icons left padding-right" title="Atualiza a versão do sistema, recarregando arquivos bases como: assets, cores e caches.">info</i>
+                <span class="left padding-tiny">Atualizar Sistema</span>
+            </button>
+        </div>
+        <div class="left padding-small padding-16">
+            <button id="envelopar-lib" class="btn hover-shadow margin-0 opacity hover-opacity-off">
+                <i class="material-icons left padding-right" title="Permite chamar este sistema como uma biblioteca, podendo ser usado seus recursos (views, assets, gets, posts).">info</i>
+                <span class="left padding-tiny">Criar Biblioteca do Sistema</span>
+            </button>
+        </div>
+        <div class="left padding-small padding-16">
+            <button id="envelopar-system" class="btn hover-shadow margin-0 opacity hover-opacity-off">
+                <i class="material-icons left padding-right" title="Permite iniciar este sistema em uma nova instalação, recuperando suas característivas.">info</i>
+                <span class="left padding-tiny">Criar Template do Sistema</span>
+            </button>
+        </div>
+    </div>
+</section>
