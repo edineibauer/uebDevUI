@@ -1,5 +1,6 @@
 {
   "title": "UI Dev",
+  "js": ["coreGrid", "coreForm", "coreReport"],
   "css": ["w3"],
   "setor": "admin"
 }

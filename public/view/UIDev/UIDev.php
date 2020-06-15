@@ -25,7 +25,6 @@
 <div class="main dashboard-main animate-right">
     <div id="dashboard" class="container row"></div>
 </div>
-<script src="<?= HOME . VENDOR ?>dashboard/public/assets/appCoreDashboard.js" defer></script>
 
 <?php
 /*if (!defined("KEY") && !preg_match('/^http:\/\/(localhost|127.0.0.1)(\/|:)/i', HOME)) {
