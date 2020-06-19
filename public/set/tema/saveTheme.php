@@ -11,4 +11,4 @@ copy(PATH_HOME . "public/assets/theme.min.css", PATH_HOME . "public/assets/theme
 $mini = new Minify\CSS($txt);
 $mini->minify(PATH_HOME . "public/assets/theme.min.css");
 
-include_once 'reloadCoreCss.php';
+new \Config\UpdateSystem(["theme"]);

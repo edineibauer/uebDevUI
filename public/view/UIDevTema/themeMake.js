@@ -305,9 +305,9 @@ function saveTheme() {
             applyTheme = 1;
             toast("Aplicando...", 6000, "toast-success");
             post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
-                setUpdateVersion().then(() => {
-                    checkUpdate();
-                });
+                updateVersionNumber().then(() => {
+                    window.location.reload();
+                })
             });
         }
     } else {
