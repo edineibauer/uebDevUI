@@ -7,13 +7,6 @@
     "file": "UIDevPermissoes"
   },
   {
-    "icon": "account_box",
-    "title": "Autores",
-    "action": "page",
-    "lib": "dev-ui",
-    "file": "UIDevAutores"
-  },
-  {
     "icon": "settings",
     "title": "Configurações",
     "action": "page",

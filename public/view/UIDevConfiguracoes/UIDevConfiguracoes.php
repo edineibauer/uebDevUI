@@ -2,7 +2,12 @@
 $conf = json_decode(file_get_contents(PATH_HOME . "_config/config.json"), true);
 
 ?>
-<div class="col padding-12">
+<header class="container">
+    <h5>
+        <b><i class="material-icons left padding-right">settings_ethernet</i> <span class="left">Configurações Administrativas</span></b>
+    </h5>
+</header>
+<div class="col padding-32">
     <div class="left container">
         <label class="col card padding-medium padding-16">
             <input type="checkbox" class="left margin-left" id="homepage"
@@ -33,12 +38,13 @@ $conf = json_decode(file_get_contents(PATH_HOME . "_config/config.json"), true);
     </div>
 </div>
 
-<script>
-    function postOptions() {
-        post("config", "updateOptions", {'autosync': $("#autosync").is(":checked"), 'dev': $("#dev").is(":checked"), 'serviceworker': $("#serviceworker").is(":checked"), 'homepage': $("#homepage").is(":checked"), 'limitoffline': $("#limitoffline").val()});
-    }
-
-    $("#autosync, #homepage, #limitoffline, #serviceworker, #dev").off("change keyup").on("change keyup", function() {
-        postOptions();
-    });
-</script>
+<section class="col padding-8 border-bottom">
+    <div class="container">
+        <div class="left padding-small padding-16">
+            <button id="clear-cache" class="btn hover-shadow margin-0 opacity hover-opacity-off">
+                <i class="material-icons left padding-right" title="Atualiza a versão do sistema, recarregando arquivos bases como: assets, cores e caches.">info</i>
+                <span class="left padding-tiny">Atualizar Bibliotecas</span>
+            </button>
+        </div>
+    </div>
+</section>
