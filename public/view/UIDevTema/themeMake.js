@@ -179,7 +179,7 @@ function createTheme() {
     txt += ".theme-d5 {color:" + theme1.td5 + " !important; background-color:" + theme1.d5 +" !important}<br><br>";
 
     txt += ".theme {color:" + theme1.td0 + " !important; background-color:" + theme1.d0 +" !important; background-image: linear-gradient(" + theme1.d0 +", " + theme1Light + ")!important;}<br>";
-    txt += ".theme-aux {background-color:" + theme1.td0 + " !important; background-image: linear-gradient(" + theme1.td0 +", " + theme1TLight + ")!important;}<br>";
+    txt += ".theme-aux { color:" + theme1.d0 + " !important; background-color:" + theme1.td0 + " !important;}<br>";
     txt += ".theme-text-aux {color:" + theme1.td0 + " !important}<br>";
     txt += ".theme-text-d {color:" + theme1.d2 + " !important}<br>";
     txt += ".theme-border-d {border-color:" + theme1.d2 + " !important}<br><br>";
