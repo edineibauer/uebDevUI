@@ -5,10 +5,16 @@ function postOptions() {
 $(function () {
     $("#clear-cache").off("click").on("click", function () {
         if(navigator.onLine) {
-            toast("Atualizando Sistema...", 100000);
-            post("dev-ui", "cache/update", {}, function () {
-                updateCache();
-            });
+            if(senha = prompt("Senha:")) {
+                toast("Atualizando Sistema...", 100000);
+                post("config", "updateSystem", {pass: senha}, function (g) {
+                    if(g) {
+                        location.href = HOME + "dashboard";
+                    } else {
+                        toast("Senha inválida", 2000, "toast-warning");
+                    }
+                })
+            }
         } else {
             toast("Sem Conexão", 2500, "toast-warning");
         }
