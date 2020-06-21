@@ -1,12 +1,5 @@
 [
   {
-    "icon": "assignment_turned_in",
-    "title": "Permissões",
-    "action": "page",
-    "lib": "dev-ui",
-    "file": "UIDevPermissoes"
-  },
-  {
     "icon": "settings",
     "title": "Configurações",
     "action": "page",
@@ -14,11 +7,11 @@
     "file": "UIDevConfiguracoes"
   },
   {
-    "icon": "format_paint",
-    "title": "Tema",
+    "icon": "assignment_turned_in",
+    "title": "Permissões",
     "action": "page",
     "lib": "dev-ui",
-    "file": "UIDevTema"
+    "file": "UIDevPermissoes"
   },
   {
     "icon": "settings_input_component",
@@ -34,10 +27,10 @@
     "entity": "api_chave"
   },
   {
-    "icon": "settings_ethernet",
-    "title": "Desenvolvimento",
+    "icon": "format_paint",
+    "title": "Tema",
     "action": "page",
     "lib": "dev-ui",
-    "file": "UIDevDesenvolvimento"
+    "file": "UIDevTema"
   }
 ]
