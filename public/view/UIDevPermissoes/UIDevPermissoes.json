@@ -1,0 +1,6 @@
+{
+  "title": "Permissões",
+  "js": ["coreGrid", "coreForm", "coreReport"],
+  "css": ["w3"],
+  "setor": "admin"
+}
