@@ -32,7 +32,7 @@ $conf = json_decode(file_get_contents(PATH_HOME . "_config/config.json"), true);
     <div class="left container">
         <label class="col card padding-medium" style="padding-bottom: 0!important;width: 160px;">
             <span class="col align-left">Limite de Registros Offline</span>
-            <input type="number" step="50" class="left" id="limitoffline" value="<?= $conf['limitoffline'] ?>"/>
+            <input type="number" style="margin-bottom: 10px;" step="50" class="left" id="limitoffline" value="<?= $conf['limitoffline'] ?>"/>
             <span class="input-bar"></span>
         </label>
     </div>
