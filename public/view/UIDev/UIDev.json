@@ -2,5 +2,10 @@
   "title": "UI Dev",
   "js": ["coreGrid", "coreForm", "coreReport"],
   "css": ["w3"],
-  "setor": "admin"
+  "setor": "admin",
+  "templates": [
+    "allow-entity-menu",
+    "allow-list-entity",
+    "allow-user-table"
+  ]
 }
