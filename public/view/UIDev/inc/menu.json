@@ -1,37 +1,9 @@
 [
   {
-    "icon": "assignment_turned_in",
-    "title": "Permissões",
-    "action": "page",
-    "lib": "dev-ui",
-    "file": "UIDevPermissoes"
-  },
-  {
-    "icon": "account_box",
-    "title": "Autores",
-    "action": "page",
-    "lib": "dev-ui",
-    "file": "UIDevAutores"
-  },
-  {
-    "icon": "settings",
-    "title": "Configurações",
-    "action": "page",
-    "lib": "dev-ui",
-    "file": "UIDevConfiguracoes"
-  },
-  {
     "icon": "format_paint",
     "title": "Tema",
     "action": "page",
     "lib": "dev-ui",
     "file": "UIDevTema"
-  },
-  {
-    "icon": "settings_ethernet",
-    "title": "Desenvolvimento",
-    "action": "page",
-    "lib": "dev-ui",
-    "file": "UIDevDesenvolvimento"
   }
 ]

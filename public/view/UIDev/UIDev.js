@@ -57,7 +57,7 @@ $(function () {
             let id = !isNaN($(this).attr("data-atributo")) && $(this).attr("data-atributo") > 0 ? parseInt($(this).attr("data-atributo")) : null;
             $("#dashboard").html("").form($(this).attr("data-entity"), id, typeof $(this).attr("data-fields") !== "undefined" ? JSON.parse($(this).attr("data-fields")) : "undefined")
         } else if (action === 'page') {
-            view($(this).attr("data-atributo"), function (data) {
+            AJAX.view($(this).attr("data-atributo")).then(data => {
                 if (typeof (data.content) === "string") {
                     if (data.content === "no-network") {
                         $("#dashboard").html("Ops! Conexão Perdida");

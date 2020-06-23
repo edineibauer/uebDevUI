@@ -21,12 +21,6 @@
     "file": "UIDevIntegracoes"
   },
   {
-    "icon": "compare_arrows",
-    "title": "APIs",
-    "action": "table",
-    "entity": "api_chave"
-  },
-  {
     "icon": "format_paint",
     "title": "Tema",
     "action": "page",
