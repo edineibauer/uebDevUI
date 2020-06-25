@@ -64,9 +64,32 @@ $(function () {
                     } else {
                         $("#dashboard").html(data.content);
 
-                        if(!isEmpty(data.js)) {
-                            for(let js of data.js)
-                                $.cachedScript(js);
+                        /**
+                         * Include templates used in this view
+                         */
+                        if(!isEmpty(g.templates)) {
+                            getTemplates().then(templates => {
+                                dbLocal.exeCreate("__template", Object.assign(templates, g.templates)).then(() => {
+
+                                    /**
+                                     * add script to page
+                                     */
+                                    if (!isEmpty(g.js)) {
+                                        for(let js of g.js)
+                                            $.cachedScript(js);
+                                    }
+                                });
+                            });
+
+                        } else {
+
+                            /**
+                             * add script to page
+                             */
+                            if (!isEmpty(g.js)) {
+                                for(let js of g.js)
+                                    $.cachedScript(js);
+                            }
                         }
                     }
                 }
