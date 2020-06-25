@@ -292,7 +292,7 @@ function restoreTheme() {
                 toast("Tema Alterado", 1000, "toast-success");
                 setUpdateVersion();
                 clearCacheUser().then(() => {
-                    window.location.reload()
+                    location.href = HOME + "dashboard";
                 });
             }
         });
@@ -306,7 +306,7 @@ function saveTheme() {
             toast("Aplicando...", 6000, "toast-success");
             AJAX.post('tema/saveTheme', {txt: localStorage.txt}).then(() => {
                 setUpdateVersion().then(() => {
-                    window.location.reload();
+                    location.href = HOME + "dashboard";
                 })
             });
         }
