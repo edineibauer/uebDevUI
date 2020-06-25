@@ -1,8 +1,5 @@
 {
   "title": "Permissões",
-  "js": ["coreGrid", "coreForm", "coreReport"],
-  "css": ["w3"],
-  "setor": "admin",
   "templates": [
     "allow-entity-menu",
     "allow-list-entity",

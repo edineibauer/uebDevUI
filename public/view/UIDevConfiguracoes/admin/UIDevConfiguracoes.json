@@ -1,6 +1,3 @@
 {
-  "title": "Configurações",
-  "js": ["coreGrid", "coreForm", "coreReport"],
-  "css": ["w3"],
-  "setor": "admin"
+  "title": "Configurações"
 }

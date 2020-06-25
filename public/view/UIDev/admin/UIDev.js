@@ -63,10 +63,11 @@ $(function () {
                         $("#dashboard").html("Ops! Conexão Perdida");
                     } else {
                         $("#dashboard").html(data.content);
-                        if (data.js.length)
-                            $.cachedScript(data.js);
-                        if (data.css.length)
-                            $("#core-style").prepend(data.css);
+
+                        if(!isEmpty(data.js)) {
+                            for(let js of data.js)
+                                $.cachedScript(js);
+                        }
                     }
                 }
             })
