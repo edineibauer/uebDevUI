@@ -67,15 +67,15 @@ $(function () {
                         /**
                          * Include templates used in this view
                          */
-                        if(!isEmpty(g.templates)) {
+                        if(!isEmpty(data.templates)) {
                             getTemplates().then(templates => {
-                                dbLocal.exeCreate("__template", Object.assign(templates, g.templates)).then(() => {
+                                dbLocal.exeCreate("__template", Object.assign(templates, data.templates)).then(() => {
 
                                     /**
                                      * add script to page
                                      */
-                                    if (!isEmpty(g.js)) {
-                                        for(let js of g.js)
+                                    if (!isEmpty(data.js)) {
+                                        for(let js of data.js)
                                             $.cachedScript(js);
                                     }
                                 });
@@ -86,8 +86,8 @@ $(function () {
                             /**
                              * add script to page
                              */
-                            if (!isEmpty(g.js)) {
-                                for(let js of g.js)
+                            if (!isEmpty(data.js)) {
+                                for(let js of data.js)
                                     $.cachedScript(js);
                             }
                         }
