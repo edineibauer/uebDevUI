@@ -169,7 +169,7 @@ function createTheme() {
     z.style.color = col;
     theme1.td5 = col;
 
-    let theme1Light = "#" + addHexColor(theme1.d0.replace("#", ""), "111111");
+    let theme1Light = "#" + addHexColor(theme1.d0.replace("#", ""), "101010");
 
     txt = ".theme-d1 {color:" + theme1.td1 + " !important; background-color:" + theme1.d1 +" !important}<br>";
     txt += ".theme-d2 {color:" + theme1.td2 + " !important; background-color:" + theme1.d2 +" !important}<br>";
