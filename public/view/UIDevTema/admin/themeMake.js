@@ -302,7 +302,7 @@ function saveTheme() {
     if(localStorage.txt) {
         if(applyTheme === 0) {
             applyTheme = 1;
-            toast("Aplicando...", 6000, "toast-success");
+            toast("Aplicando novo tema...", 16000, "toast-success");
             AJAX.post('tema/saveTheme', {txt: localStorage.txt}).then(() => {
                 setUpdateVersion().then(() => {
                     location.href = HOME + "dashboard";
