@@ -9,10 +9,14 @@ $(function () {
             if(senha = prompt("Senha:")) {
                 toast("Atualizando Sistema...", 100000);
                 AJAX.post("updateSystem", {pass: senha}).then(g => {
-                    if(g)
-                        location.href = HOME + "dashboard";
-                    else
+                    if(g) {
+                        localStorage.removeItem('update');
+                        checkUpdate().then(() => {
+                            location.href = HOME + "dashboard";
+                        })
+                    } else {
                         toast("Senha inválida", 2000, "toast-warning");
+                    }
                 });
             }
         } else {
