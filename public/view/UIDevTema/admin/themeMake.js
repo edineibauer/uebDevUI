@@ -305,7 +305,7 @@ function saveTheme() {
             applyTheme = 1;
             toast("Aplicando...", 6000, "toast-success");
             AJAX.post('tema/saveTheme', {txt: localStorage.txt}).then(() => {
-                updateVersionNumber().then(() => {
+                setUpdateVersion().then(() => {
                     window.location.reload();
                 })
             });
