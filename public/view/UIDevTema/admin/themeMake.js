@@ -289,10 +289,7 @@ function restoreTheme() {
                 toast("tema anterior não encontrado", 3000, "toast-warning");
             } else {
                 toast("Tema Alterado", 1000, "toast-success");
-                setUpdateVersion();
-                clearCacheUser().then(() => {
-                    location.href = HOME + "dashboard";
-                });
+                setUpdateVersion().then(updateCache);
             }
         });
     }
@@ -304,9 +301,7 @@ function saveTheme() {
             applyTheme = 1;
             toast("Aplicando novo tema...", 16000, "toast-success");
             AJAX.post('tema/saveTheme', {txt: localStorage.txt}).then(() => {
-                setUpdateVersion().then(() => {
-                    location.href = HOME + "dashboard";
-                })
+                setUpdateVersion().then(updateCache)
             });
         }
     } else {
