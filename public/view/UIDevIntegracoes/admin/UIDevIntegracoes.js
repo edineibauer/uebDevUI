@@ -1,8 +1,8 @@
 function saveConfig(field, value) {
-    post("dev-ui", "settings/saveConfig", {field: field, value: value}, function (g) {
+    AJAX.post("settings/saveConfig", {field: field, value: value}).then(g => {
         if (g)
             toast("erro", 3000, "toast-warning")
-    })
+    });
 }
 
 $(function () {

@@ -19,7 +19,7 @@ $(function () {
         }
 
         let dados = Object.assign({}, permit.permissoes);
-        post('dev-ui', 'save/permissoes', {dados: dados}, function () {
+        AJAX.post('save/permissoes', {dados: dados}).then(() => {
             let all = [];
             all.push(get("allow"));
             all.push(dbLocal.clear('__allow'));
@@ -27,7 +27,7 @@ $(function () {
                 dbLocal.exeCreate("__allow", r[0]);
             });
             setUpdateVersion()
-        })
+        });
     });
 
     let pp = get('devPermissoes');

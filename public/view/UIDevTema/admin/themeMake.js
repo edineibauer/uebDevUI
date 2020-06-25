@@ -285,7 +285,7 @@ function restoreTheme() {
     if(applyTheme === 0) {
         applyTheme = 1;
         toast("Restaurando...", 6000, "toast-success");
-        post('dev-ui', 'tema/restoreTheme', function (d) {
+        AJAX.post('tema/restoreTheme').then(d => {
             if (d === "no") {
                 toast("tema anterior não encontrado", 3000, "toast-warning");
             } else {
@@ -304,7 +304,7 @@ function saveTheme() {
         if(applyTheme === 0) {
             applyTheme = 1;
             toast("Aplicando...", 6000, "toast-success");
-            post('dev-ui', 'tema/saveTheme', {txt: localStorage.txt}, function () {
+            AJAX.post('tema/saveTheme', {txt: localStorage.txt}).then(() => {
                 updateVersionNumber().then(() => {
                     window.location.reload();
                 })

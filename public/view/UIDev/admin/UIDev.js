@@ -76,13 +76,13 @@ $(function () {
 
     $("#app, #core-applications").off("click", ".close-dashboard-note").on("click", ".close-dashboard-note", function () {
         let $this = $(this);
-        post('dev-ui', 'dash/delete', {id: $this.attr("id")}, function (data) {
+        AJAX.post('dash/delete', {id: $this.attr("id")}).then(() => {
             $this.closest("article").parent().remove()
-        })
+        });
     });
     setTimeout(function () {
-        post("dev-ui", "panel", {}, function (data) {
+        AJAX.post("panel", {}).then(data => {
             $("#dashboard").html(data);
-        })
+        });
     }, 300)
 })
