@@ -1,3 +1,4 @@
 {
-  "title": "Configurações"
+  "title": "Configurações",
+  "js": ["coreGrid", "coreForm"]
 }

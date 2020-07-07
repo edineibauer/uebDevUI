@@ -1,3 +1,4 @@
 {
-  "title": "Tema"
+  "title": "Tema",
+  "js": ["coreGrid", "coreForm"]
 }

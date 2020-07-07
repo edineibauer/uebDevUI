@@ -26,5 +26,11 @@
     "action": "page",
     "lib": "dev-ui",
     "file": "UIDevTema"
+  },
+  {
+    "icon": "compare_arrows",
+    "title": "APIs",
+    "action": "table",
+    "entity": "api_chave"
   }
 ]

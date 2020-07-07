@@ -4,5 +4,6 @@
     "allow-entity-menu",
     "allow-list-entity",
     "allow-user-table"
-  ]
+  ],
+  "js": ["coreGrid", "coreForm"]
 }
