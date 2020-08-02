@@ -6,8 +6,9 @@ $(function () {
 
     $("#app").off("click", "#clear-cache").on("click", "#clear-cache", function () {
         if(navigator.onLine) {
+            $("#app").off("click", "#clear-cache");
             toast("Atualizando Sistema...", 1000000000);
-            AJAX.post("updateSystem", {pass: senha}).then(g => {
+            AJAX.post("updateSystem").then(() => {
                     if(typeof sseSource !== "undefined" && navigator.onLine && typeof (EventSource) !== "undefined")
                         sseSource.close();
 
