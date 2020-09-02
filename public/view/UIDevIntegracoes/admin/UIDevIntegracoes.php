@@ -15,7 +15,7 @@ if(file_exists(PATH_HOME . "public/integracoes")){
     foreach (\Helpers\Helper::listFolder(PATH_HOME . "public/integracoes") as $c) {
         $file = json_decode(file_get_contents(PATH_HOME . "public/integracoes/{$c}"), !0);
         foreach ($file['constantes'] as $nome => $column)
-            $file['constantes'][$nome]['value'] = $dados[$file['constantes'][$nome]['column']] ?? "";
+            $file['constantes'][$nome]['value'] = $dados[strtolower($file['constantes'][$nome]['column'])] ?? "";
 
         $integ['integration'][] = $file;
     }
@@ -26,7 +26,7 @@ foreach (\Helpers\Helper::listFolder(PATH_HOME . VENDOR) as $item) {
         foreach (\Helpers\Helper::listFolder(PATH_HOME . VENDOR . $item . "/public/integracoes") as $c) {
             $file = json_decode(file_get_contents(PATH_HOME . VENDOR . $item . "/public/integracoes/{$c}"), true);
             foreach ($file['constantes'] as $nome => $column)
-                $file['constantes'][$nome]['value'] = $dados[$file['constantes'][$nome]['column']] ?? "";
+                $file['constantes'][$nome]['value'] = $dados[strtolower($file['constantes'][$nome]['column'])] ?? "";
 
             $integ['integration'][] = $file;
         }
