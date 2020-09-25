@@ -20,6 +20,17 @@ $(function () {
         } else {
             toast("Sem Conexão", 2500, "toast-warning");
         }
+    }).off("click", "#create-cache-db").on("click", "#create-cache-db", function () {
+        if(navigator.onLine) {
+            toast("Criando cache do banco", 10000000, "toast-infor");
+            AJAX.post("createMaestruCacheDb").then(g => {
+                toast("Limpando cache do banco", 1000, "toast-success");
+                if (g)
+                    toast("Cache do banco limpo", 1000, "toast-success");
+                else
+                    toast("Algo deu errado", 2000, "toast-warning");
+            });
+        }
     }).off("click", "#create-bundle").on("click", "#create-bundle", function () {
         if(navigator.onLine) {
             AJAX.post("createMaestruBundle").then(g => {
