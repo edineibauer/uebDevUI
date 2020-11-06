@@ -31,14 +31,10 @@ $(function () {
                     toast("Algo deu errado", 2000, "toast-warning");
             });
         }
-    }).off("click", "#create-bundle").on("click", "#create-bundle", function () {
+    }).off("click", "#updateAppStore").on("click", "#updateAppStore", function () {
         if(navigator.onLine) {
-            AJAX.post("createMaestruBundle").then(g => {
-                if (g)
-                    toast("App criado na pasta `bundle/`", 3000, "toast-success");
-                else
-                    toast("Algo deu errado", 2000, "toast-warning");
-            });
+            AJAX.post("updateAppOnAndroid");
+            toast("enviamos uma mensagem para os usuários atualizarem seu app", 3000, "toast-infor");
         }
     });
 
