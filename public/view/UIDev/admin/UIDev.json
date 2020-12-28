@@ -1,5 +1,6 @@
 {
-  "title": "UI Dev",
+  "title": "Config. Adm",
+  "icon": "app_settings_alt",
   "css": ["w3"],
   "js": ["coreGrid", "coreForm"]
 }
