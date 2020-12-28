@@ -13,7 +13,7 @@
                 <div id="list-entity"></div>
             </div>
         </div>
-        <div class="rest" style="overflow-x: scroll">
+        <div class="rest" style="overflow-x: auto">
             <div class="col margin-right" style="width: 10000px;" id="permissao-container">
 
                 <div class="left padding-right" style="width: 75px">
