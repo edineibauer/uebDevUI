@@ -2,5 +2,7 @@
   "title": "Config. Adm",
   "icon": "app_settings_alt",
   "css": ["w3"],
-  "js": ["coreGrid", "coreForm"]
+  "js": ["coreGrid", "coreForm"],
+  "header": false,
+  "navbar": false
 }

@@ -1,12 +1,6 @@
 <?php
 $conf = json_decode(file_get_contents(PATH_HOME . "_config/config.json"), true);
-
 ?>
-<header class="container">
-    <h5>
-        <b><i class="material-icons left padding-right">settings_ethernet</i> <span class="left">Configurações Administrativas</span></b>
-    </h5>
-</header>
 <div class="col padding-32">
     <div class="left container">
         <label class="col card padding-medium padding-16">

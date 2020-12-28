@@ -1,3 +1,7 @@
 {
-  "menu": false
+  "menu": false,
+  "header": false,
+  "navbar": false,
+  "css": ["w3"],
+  "js": ["coreGrid", "coreForm"]
 }

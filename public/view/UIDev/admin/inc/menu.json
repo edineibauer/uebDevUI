@@ -1,9 +1,0 @@
-[
-  {
-    "icon": "format_paint",
-    "title": "Tema",
-    "action": "page",
-    "lib": "dev-ui",
-    "file": "UIDevTema"
-  }
-]

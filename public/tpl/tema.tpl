@@ -1,9 +1,3 @@
-<header class="container padding-bottom">
-    <h5>
-        <b><i class="material-icons left padding-right">format_paint</i> <span class="left">Tema</span></b>
-    </h5>
-</header>
-
 <div class="col">
     <div class="col padding-small">
         <div class="col card">

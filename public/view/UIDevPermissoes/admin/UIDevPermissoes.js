@@ -101,9 +101,9 @@ $(function () {
     }
 
     $("#permissao").off("mouseover", ".stripp").on("mouseover", ".stripp", function () {
-        $(".stripp[rel='" + $(this).attr("rel") + "']").addClass("color-gray-light")
+        $(".stripp[rel='" + $(this).attr("rel") + "']").addClass("mode-background-colorLine")
     }).off("mouseleave", ".stripp").on("mouseleave", ".stripp", function () {
-        $(".stripp").removeClass("color-gray-light")
+        $(".stripp").removeClass("mode-background-colorLine")
     });
     $("#newUserType").off("click").on("click", function () {
         let userType = prompt("Dê um nome ao novo tipo de usuário", "ex: Funcionário");

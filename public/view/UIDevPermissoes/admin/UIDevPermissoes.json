@@ -5,6 +5,9 @@
     "allow-list-entity",
     "allow-user-table"
   ],
+  "css": ["w3"],
   "js": ["coreGrid", "coreForm"],
-  "menu": false
+  "menu": false,
+  "header": false,
+  "navbar": false
 }

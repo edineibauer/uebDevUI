@@ -1,5 +1,8 @@
 {
   "title": "Configurações",
+  "css": ["w3"],
   "js": ["coreGrid", "coreForm"],
-  "menu": false
+  "menu": false,
+  "header": false,
+  "navbar": false
 }

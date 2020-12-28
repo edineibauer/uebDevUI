@@ -1,9 +1,3 @@
-<header class="container">
-    <h5>
-        <b><i class="material-icons left padding-right">block</i> <span class="left">Permissões</span></b>
-    </h5>
-</header>
-
 <section class="col padding-32 border-bottom">
     <header class="container col">
         <h2>Permissões de Usuários <i class="material-icons" style="cursor: default"

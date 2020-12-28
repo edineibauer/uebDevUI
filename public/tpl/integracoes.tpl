@@ -1,9 +1,3 @@
-<header class="container padding-bottom">
-    <h5>
-        <b><i class="material-icons left padding-right">settings_input_component</i> <span class="left">Integrações</span></b>
-    </h5>
-</header>
-
 <div class="col s12 padding-small">
 
     <div class="col s12 m6 padding-medium">
