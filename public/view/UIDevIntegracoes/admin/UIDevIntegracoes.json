@@ -1,4 +1,5 @@
 {
   "title": "Integrações",
-  "js": ["coreGrid", "coreForm"]
+  "js": ["coreGrid", "coreForm"],
+  "menu": false
 }
