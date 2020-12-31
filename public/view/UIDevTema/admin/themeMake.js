@@ -209,9 +209,6 @@ function createTheme() {
         txt += ".form-crud input:focus, .form-crud textarea:focus, .form-crud select:focus, .form-crud select {border-bottom-color:" + theme1.d0 + " !important}<br><br>";
         txt += ".form-crud .input-bar:before, .form-crud .input-bar:after {background-color:" + theme1.d0 + "!important; background-image: linear-gradient(" + theme1.d0 +", " + theme1Light + ")!important;}<br><br>";
 
-        /* PAGINAÇÃO */
-        txt += ".bar.pagination .button.active {background-color:" + theme1.d0 + "!important; background-image: linear-gradient(" + theme1.d0 +", " + theme1Light + ")!important;}<br><br>";
-
         /* TEXTAREA STYLE */
         txt += ".form-crud .jqte_focused {border-bottom-color:" + theme1.d0 + " !important; border-left-color:" + theme1.d0 + " !important;}<br>";
 
