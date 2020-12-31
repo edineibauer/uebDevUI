@@ -203,13 +203,11 @@ function createTheme() {
 
         /* TEMA ADICONAL PARA TROCA DE ELEMENTOS PADRÕES */
         /*===================================================*/
-
-        txt += ".form-crud .switch input:checked + .slider {background-color:" + theme1.l4 + "!important}<br>";
-        txt += ".form-crud .switch input:checked + .slider:after {background-color:" + theme1.d0 + "!important}<br>";
+        txt += ".switch input:checked + .slider:after {background-color:" + theme1.d0 + "!important}<br>";
 
         /* INPUT BAR STYLE */
         txt += ".form-crud input:focus, .form-crud textarea:focus, .form-crud select:focus, .form-crud select {border-bottom-color:" + theme1.d0 + " !important}<br><br>";
-        txt += ".form-crud .input-bar:before, .form-crud .input-bar:after, .form-crud button {background-color:" + theme1.d0 + "!important; background-image: linear-gradient(" + theme1.d0 +", " + theme1Light + ")!important;}<br><br>";
+        txt += ".form-crud .input-bar:before, .form-crud .input-bar:after {background-color:" + theme1.d0 + "!important; background-image: linear-gradient(" + theme1.d0 +", " + theme1Light + ")!important;}<br><br>";
 
         /* PAGINAÇÃO */
         txt += ".bar.pagination .button.active {background-color:" + theme1.d0 + "!important; background-image: linear-gradient(" + theme1.d0 +", " + theme1Light + ")!important;}<br><br>";
