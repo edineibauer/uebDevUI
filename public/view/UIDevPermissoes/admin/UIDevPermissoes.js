@@ -36,7 +36,7 @@ $(function () {
 
         permit.users.push({id: "0", user: "Anônimo"});
         $.each(r[1], function(entity, meta) {
-            if(typeof meta.user === "number" && meta.user === 1)
+            if(typeof meta.user === "number" && meta.user === 1 && entity !== "admin")
                 permit.users.push({id: entity, user: ucFirst(replaceAll(entity, '_', ' '))})
         });
 
