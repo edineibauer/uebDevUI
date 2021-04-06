@@ -1,7 +1,3 @@
 <?php
 
-$dados = filter_input(INPUT_POST, 'dados', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
-
-$f = fopen(PATH_HOME . "_config/permissoes.json", "w+");
-fwrite($f, json_encode($dados));
-fclose($f);
+\Config\Config::createFile(PATH_HOME . "_config/permissoes.json", strip_tags(trim(filter_input(INPUT_POST, 'dados', FILTER_DEFAULT))));

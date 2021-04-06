@@ -19,7 +19,7 @@ $(function () {
         }
 
         let dados = Object.assign({}, permit.permissoes);
-        AJAX.post('save/permissoes', {dados: dados}).then(() => {
+        AJAX.post('save/permissoes', {dados: JSON.stringify(dados)}).then(() => {
             let all = [];
             all.push(get("allow"));
             all.push(dbLocal.clear('__allow'));
